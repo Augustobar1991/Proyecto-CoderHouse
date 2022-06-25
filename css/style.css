@@ -1,0 +1,446 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: rgb(14, 14, 14);
+    margin: 0;
+}
+
+html{
+    min-height: 100%;
+    position: relative;
+}
+
+/* inicio header */
+header{
+    position: fixed;
+    top: 0; 
+    left: 0;
+    right: 0;
+    background: rgb(33, 33, 33);
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.3);
+    padding: 0px 2% 0 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.cabeceraIcon{
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+}
+
+.cabecera__lista li{
+    position: relative;
+    float: left;
+}
+
+.cabecera__lista li a{
+    font-size: 18px;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    display: block;
+}
+
+.cabecera__lista li a:hover{
+    background: rgb(175, 0, 0);
+    color: white;
+    text-align:  center;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.cabecera__sublista{
+    position: absolute;
+    width: 145px;
+    background: rgba(33, 33, 33, 0.7);
+    display: none;
+}
+
+.cabecera__sublista li{
+    text-align:  center;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cabecera__sublista li ul{
+    left: 200px;
+    top: 0;
+}
+
+.cabecera__lista li:focus-within > ul,
+.cabecera__lista li:hover > ul{
+    display: initial;
+}
+
+#menu-bar{
+    display: none;
+}
+
+header label{
+    padding-right: 20px;
+    font-size: 20px;
+    color: rgb(255, 255, 255); 
+    cursor: pointer;
+    display: none;
+}
+
+/* fin header */
+
+/* inicio section "inicio" */
+.sectionIndex{
+    padding-top: 16vh; 
+    display: grid;
+    justify-items:center;
+    align-items: center;
+    margin-bottom: 18vh;
+} 
+.sectionIndex img{
+    width: 70%; 
+}
+
+/* fin section "inicio" */
+
+/* inicio Automotores */
+.autos{
+    padding-top: 16vh;  
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 20px;
+    background-color: rgb(14, 14, 14);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin-bottom: 18vh;
+}
+
+#peugeot-308{
+    width: 90%;
+    border: 3px red solid;
+}
+
+#gol-trend{
+    width: 90%;
+    border: 3px red solid;
+}
+/* fin Automotores */
+
+/* inicio chapa y pintura */
+.section__pintura{
+    background-color: rgb(14, 14, 14);;
+    display: grid;
+    justify-items:center;
+    padding-top: 16vh; 
+    margin-bottom: 18vh;
+} 
+
+.section__pintura img{
+    width: 80%;;
+    border: 3px red solid;
+}
+/* fin chapa y pintura */
+
+/* inicio llantas */ 
+.llantas{
+    margin-top: 16vh; 
+    background-color: rgb(14, 14, 14);;
+    color: white;
+    margin-bottom: 18vh;
+}
+
+.llantas__18{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.llantas__18 div{
+    padding-bottom: 30px;
+    margin: auto;
+}
+
+.llantas__18 img{
+    width: 30%;
+    border: 3px red solid;
+    width: 40vw;
+}
+
+.llantas__17{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.llantas__17 div{
+    padding-bottom: 30px;
+    margin: auto;
+}
+
+.llantas__17 img{
+    border: 3px red solid;
+    width: 40vw;
+}
+
+.llantas__16{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.llantas__16 div{
+    padding-bottom: 30px;
+    margin: auto;
+}
+
+.llantas__16 img{
+    width: 30%;
+    border: 3px red solid;
+    width: 40vw;
+}
+
+.llantas p{
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+}
+/* fin llantas */
+
+/* inicio contacto */
+.contacto{
+    background-color: rgb(14, 14, 14);
+    padding-top: 16vh; 
+    margin-bottom: 2vh;
+}
+
+.contacto__mapa iframe{
+padding: 30px;
+}
+
+.contacto__texto,
+.contacto__mapa{
+    width: 90%;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.contacto__texto h2,
+.contacto__mapa h2{
+    display: grid;
+    justify-content:center;
+    background-color: rgb(175, 0, 0);
+    padding: 2%; 
+}
+
+.contacto__texto__area{
+    padding: 20px 0px 10px 10px; 
+}
+
+.contacto__texto__area__int{
+    padding: 10px; 
+    width: 100%; 
+    height: 200px;
+}
+
+.contacto__texto form ul li input{
+    width: 200px;
+    padding: 5px; 
+}
+
+.contacto__texto form ul li{
+    padding: 10px; 
+}
+
+.contacto__texto form ul li:first-child{
+    padding-top: 20px;  
+}
+/* fin section contacto */
+
+
+/* inicio footer */
+.footer{
+    background-color: rgb(14, 14, 14);
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    flex-wrap: nowrap;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footerContacto{
+    background-color: rgb(14, 14, 14);
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.fooster__mapa iframe{
+    width: 27vw;
+    height: 100px;
+    border-style: none;
+    border: 4px rgb(175, 0, 0) solid;
+}
+
+.fooster__ubicacion{
+    text-align: right;  
+    font-weight: bold; /*en negrita */
+    color: white;
+}
+/* fin footer */
+
+/* Inicio Media Query */
+@media (min-width:800px) {
+
+    .fooster__ubicacion p{
+        padding: 5px;
+    }
+
+    .fooster__icon{
+        width: 60px;
+        padding: 10px;
+    } 
+    
+    .contacto{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contacto__mapa iframe{
+        width: 100%;
+        height: 90%;
+    }
+}
+
+@media(max-width:800px){
+    header{
+        padding: 0px 0.5% 0 0.5%;
+    }
+    .cabecera__lista li a{
+        padding: 20px 8px;
+    }
+
+    .contacto__texto h2,
+    .contacto__mapa h2{
+        font-size:medium;
+    }
+
+    .autos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #peugeot-308{
+        width: 100%;
+    }
+    
+    #gol-trend{
+        width: 100%;
+    }
+
+    .fooster__ubicacion p{
+        padding: 5px;
+    }
+
+    .fooster__ubicacion{
+        font-size: 13px;
+    }
+
+    .fooster__icon{
+        width: 40px;
+        padding: 5px 5px;
+    } 
+}
+
+@media(max-width:600px){
+/*inicio header */
+    header label{
+        display: initial;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        right: 0%;
+        background: rgb(33, 33, 33);
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        display: none;
+    }
+    .cabecera__lista li a:hover,
+    .cabecera__sublista li{
+        text-align:left;
+    }
+    
+    .cabecera__lista li{
+        width: 100%;
+    }
+    .cabecera__sublista{
+        position: relative;
+        text-align:left;
+        width: 100%;
+    }
+    .cabecera__sublista li{
+        background: rgb(66, 66, 66);;
+    }
+    .cabecera__sublista li ul{
+        left: 0%;
+        width: 100%;
+    }
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+/* fin header */
+
+    .sectionIndex img{
+        width: 90%; 
+    }
+
+    .llantas img{
+        width: 70vw;
+    }
+    .contacto__texto form ul li input{
+        width: 200px;
+        padding: 5px; 
+    }
+
+    .section__pintura img {
+        width: 90%;
+    }    
+
+/* inicio fooster */
+    .fooster__ubicacion{
+        font-size: 8px;
+    }
+
+    .fooster__ubicacion p{
+        padding: 3px;
+    }
+    
+    .fooster__item{
+        display: flex;
+        flex-wrap: wrap;
+    } 
+    .fooster__icon{
+        width: 30px;
+    } 
+/* fin fooster */
+}
+
+/* Fin Media Query */
