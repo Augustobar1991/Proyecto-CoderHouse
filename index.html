@@ -1,93 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
     <!-- favicon -->
     <link rel="icon" type="image/png" href="multimedia/image/favicon.png">
 
-     <!-- CSS-->
-     <link rel="stylesheet" href="css/style.css">
-
     <title>La Casa de las Lantas</title>
+
+    <!-- Styles for this template -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
 </head>
-<body>
 
+  <body>
 <!-- Header -->
-<header>
-  <a href="index.html">
-      <img class="cabeceraIcon" src="multimedia/image/icon.png" alt="la casa de las llantas">
-  </a>
+    <header>
+      <a href="index.html">
+          <img class="cabeceraIcon" src="multimedia/image/icon.png" alt="la casa de las llantas">
+      </a>
+      <input type="checkbox" id="menu-bar">
+      <label for="menu-bar">Menu</label>
+      <nav class="navbar">
+          <ul class="cabecera__lista">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="#automotores">Automotores</a>
+                  <ul class="cabecera__sublista">
+                      <li><a href="#peugeot-308">Peugeot 308</a></li>
+                      <li><a href="#gol-trend">Gol Trend</a></li>
+                  </ul>
+              </li>
+              <li><a href="#chapa-y-pintura">Chapa y Pintura</a></li>
+              <li><a href="#llantas">Llantas</a>
+                  <ul class="cabecera__sublista">
+                  <li><a href="#llanta-18">Llantas 18</a></li>
+                  <li><a href="#llanta-17">Llantas 17</a></li>
+                  <li><a href="#llanta-16">Llantas 16</a></li>
+                  </ul>
+              </li>
+              <li><a href="#contacto">Contacto</a></li>
+          </ul>
+      </nav>
+    </header>
 
-  <input type="checkbox" id="menu-bar">
-  <label for="menu-bar">Menu</label>
-  
-  <nav class="navbar">
-      <ul class="cabecera__lista">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="pages/automotores.html">Automotores</a>
-              <ul class="cabecera__sublista">
-                  <li><a href="pages/automotores.html#peugeot-308">Peugeot 308</a></li>
-                  <li><a href="pages/automotores.html#gol-trend">Gol Trend</a></li>
-              </ul>
-          </li>
-          <li><a href="pages/chapa-y-pintura.html">Chapa y Pintura</a></li>
-          <li><a href="pages/llantas.html">Llantas</a>
-              <ul class="cabecera__sublista">
-              <li><a href="pages/llantas.html#llanta-18">Llantas 18</a></li>
-              <li><a href="pages/llantas.html#llanta-17">Llantas 17</a></li>
-              <li><a href="pages/llantas.html#llanta-16">Llantas 16</a></li>
-              </ul>
-          </li>
-          <li><a href="pages/contacto.html">Contacto</a></li>
-      </ul>
-  </nav>
-</header>
+<!-- Main -->
+    <main role="main" id="main">
 
-<section class="sectionIndex">    
-    <!-- Imagen principal -->
-    <img src="multimedia/image/fondo.gif" alt="la casa de las llantas"> 
-</section>
+      <div id="carouselExampleDark" class="carousel carousel-dark slide " data-bs-ride="carousel" >
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="multimedia/image/banner-1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption ">
+              <h2>LA CASA DE LAS LLANTAS</h2>
+            </div>
+            <div  class="carousel-caption ">
+              <p>Contamos con gran experiencia</p><p>Desde 1972 al servicio de nuestros clientes</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="multimedia/image/banner-2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption ">
+              <h2>taller integral <br> de  Chapa y pintura</h2>
+            </div>
+            <div  class="carousel-caption ">
+              <p> - reparacion de bollos por choque y granizo</p><p> - Reparacion y pintado de paragolpes y molduras</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="multimedia/image/banner-3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption ">
+              <h2>venta automotor</h2>
+            </div>
+            <div class="carousel-caption ">
+              <p>todas las marcas</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="multimedia/image/banner-4.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption ">
+              <h2>todas las llantas</h2>
+            </div>
+            <div  class="carousel-caption ">
+              <p>- autos <br>- camionetas <br>- tractores</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="visually-hidden">Next</span>
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
 
-    
-<footer class="footer">
-    <div class="fooster__item">
-        <!--WhatsApp-->
-        <a  href="https://api.whatsapp.com/send?phone=5493454166220&text=hola,%20me%20interesa%20esto:" target="_blank">
-          <img class="fooster__icon" src="multimedia/image//whatsapp.png" alt="la casa de las llantas">    
-        </a>
-        
-        <!--Telefono-->
-        <a  href="tel:+5493454214174" target="_blank">
-          <img class="fooster__icon" src="multimedia/image/phone.png" alt="la casa de las llantas">
-        </a>
-      
-        <!--Facebook-->
-        <a  href="https://www.facebook.com/lacasadelasllantasconcordia/" target="_blank">
-          <img class="fooster__icon" src="multimedia/image/face.png" alt="la casa de las llantas">
-        </a>
-  
-        <!--Instagram-->
-        <a  href="https://www.instagram.com/lacasadelasllantas/" target="_blank">
-          <img class="fooster__icon" src="multimedia/image/insta.png" alt="la casa de las llantas">    
-        </a>
+        </button>
       </div>
 
-    <div class="fooster__mapa">
-    <!--Mapa-->  
-        <iframe class="fooster__mapa__item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d902.2547836601474!2d-58.01260617371327!3d-31.373863601085997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ade821530bf145%3A0x84c1e9b114790fe0!2sLa%20Casa%20de%20Las%20Llantas!5e0!3m2!1ses-419!2sar!4v1653608536154!5m2!1ses-419!2sar" allowfullscreen></iframe>
+      <!-- inicio automotores -->
+
+      <section class="autos" id="automotores">
+       <p class="automotores">automotores</p>
+       <div class="linea"></div>
+        <!-- Auto 1 -->
+        <div class="card">
+           
+          <input class="inputauto" type="checkbox" name="">
+          <div class="toggle">+</div>
+          <div class="imgBx"><img id="peugeot-308" src="../multimedia/autos/peugeot-308/308.gif" alt="Peugeot 308 1.6"> 
+          </div>
+          <div class="details">
+              <h2>PEUGEOT 308</h2>
+              <h6>
+               <ul> 
+                <li>📌 1.6 Active</li>
+                <li>📌 Modelo 2016</li>
+                <li>📌 Tanque 60 litros</li>
+                <li>📌 Baúl 430 litros</li>
+                <li>📌 Caja Manual 5ta</li>
+                <li>📌 Impuestos al día</li>
+                <li>📌 Valor: $2900000</li>
+                <li>📌 Excelente por donde se mire!</li>
+                <li>📌 Llévatelo con mínimos requisitos! 👍</li>
+                <li>📌 Listo para transferir</li>
+                <li>📌 Contamos con gestoría propia </li>
+              </ul>
+            </h6>
+          </div>
+        </div>
+          <!-- Auto 2 -->
+          <div class="card">
+            <input class="inputauto" type="checkbox" name="">
+            <div class="toggle">+</div>
+            <div class="imgBx"> <img id="gol-trend" src="../multimedia/autos/gol-trend/gol.gif" alt="Gol trend 1.6"></div>
+            <div class="details">
+                <h2>VOLKSWAGEN GOL TREND</h2>
+                <h6>
+                 <ul> 
+                  <li>📌 2017 hatchback</li>
+                  <li>📌 63975 Km</li>
+                  <li>📌 Doble Airbag</li>
+                  <li>📌 5 puertas</li>
+                  <li>📌 Transmisión manual</li>
+                  <li>📌 Motor 1.6</li>
+                  <li>📌 Precio $2400000</li>
+                  <li>📌 Neumáticos y llantas en excelente estado</li>
+                  <li>📌 Impuestos al día</li>
+                  <li>📌 Listo para transferir</li>
+                  <li>📌 Contamos con gestoría propia </li>
+                </ul>
+              </h6>
+            </div>
+          </div>
+    </section>
+
+    <!-- inicio chapa y pintura -->
+
+    <section id="chapa-y-pintura" class="chapa-y-pintura">
+      <p class="chapaypintura">Chapa y Pintura</p>
+      <div class="lineacyp"></div>
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Taller integral de chapa y Pintura</h2>
+          <p class="lead">- Repintado de piezas <br>- Reparación de bollos por choque y granizo <br>- Reparación y pintado de paragolpes y molduras </p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto" alt="500x500" src="multimedia/pintura/pintura.gif" data-holder-rendered="true">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- llantas -->
+    <section id="llantas" class="llantas">
+      <p class="llantasp">llantas</p>
+      <div class="lineallanta"></div>
+      <div class="llantasdiv">
+      <!-- Llanta 18" 1 -->
+      <div  class="llantas__18" id="llanta-18"> 
+        <div>
+          <img src="../multimedia/llantas/llanta-2/llanta2.gif" title="Llantas de 18" alt="Llantas de 18"> 
+          <p>Llantas de 18"</p>
+        </div> 
+      </div>
+      <!-- Llanta 17" 1-->
+      <div class="llantas__17" id="llanta-17"> 
+        <div>
+          <img src="../multimedia/llantas/llanta-1/llanta1.gif" title="Llantas de 17" alt="Llantas de 17"> 
+          <p>Llantas de 17"</p>
+        </div>
+      <!-- Llanta 17" 2 -->
+        <div>
+          <img src="../multimedia/llantas/llanta-6/llanta6.gif" title="Llantas de 17" alt="Llantas de 17"> 
+          <p>Llantas de 17"</p>
+        </div>
+      </div>
+      <!-- Llanta 16" 1 -->
+      <div class="llantas__16" id="llanta-16">
+        <div>
+          <img src="../multimedia/llantas/llanta-3/llanta3.gif" title="Llantas de 16" alt="Llantas de 16"> 
+          <p>Llantas de 16"</p>
+        </div> 
+      <!-- Llanta 16" 2 -->
+        <div>
+          <img src="../multimedia/llantas/llanta-4/llanta4.jpg" title="Llantas de 16" alt="Llantas de 16"> 
+          <p>Llantas de 16"</p>
+        </div> 
+      <!-- Llanta 16" 3 -->
+        <div>
+          <img src="../multimedia/llantas/llanta-5/llanta5.jpg" title="Llantas de 16" alt="Llantas de 16"> 
+          <p>Llantas de 16"</p>
+        </div>
+       </div>
+      </div>
+      </section>
+    
+<!--Section: Contact v.2-->
+<section class="mb-4" id="contacto">
+
+  <p class="contactop">Formulario de Contacto</p>
+  <div class="lineacontacto"></div>
+
+  <h2 class="h1-responsive text-center">Consultanos</h2>
+  <p class="text-center">De Lunes a Viernes de 8 a 12hs y de 15 a 20hs <br> Los Sabados de 8 a 12hs</p>
+
+  <div>
+      <!--Grid column-->
+      <div class="contact">
+          <form id="contact-form" name="contact-form" action="" method="POST">
+
+              <!--Grid row-->
+              <div class="row">
+
+                  <!--Grid column-->
+                  <div class="col-md-6">
+                      <div class="md-form mb-0">
+                          <input type="text" id="name" name="name" class="form-control">
+                          <label for="name" class="">Nombre</label>
+                      </div>
+                  </div>
+                  <!--Grid column-->
+
+                  <!--Grid column-->
+                  <div class="col-md-6">
+                      <div class="md-form mb-0">
+                          <input type="text" id="email" name="email" class="form-control">
+                          <label for="email" class="">Email</label>
+                      </div>
+                  </div>
+                  <!--Grid column-->
+
+              </div>
+              <!--Grid row-->
+
+              <!--Grid row-->
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="md-form mb-0">
+                          <input type="text" id="phone" name="phone" class="form-control">
+                          <label for="phone" class="">Telefono</label>
+                      </div>
+                  </div>
+              </div>
+              <!--Grid row-->
+
+              <!--Grid row-->
+              <div class="row">
+
+                  <!--Grid column-->
+                  <div class="col-md-12">
+
+                      <div class="md-form">
+                          <textarea type="text" id="message" name="message" rows="4" class="form-control md-textarea"></textarea>
+                          <label for="message">Mensaje</label>
+                      </div>
+
+                  </div>
+              </div>
+              <!--Grid row-->
+
+          </form>
+
+          <div class="text-center text-md-left">
+            <a class="btn btn-primary" onclick="validateForm();">Enviar</a>
+          </div>
+          <div class="status"></div>
+      </div>
+      <!--Grid column-->
     </div>
 
-    <div class="fooster__ubicacion">
-    <!-- Ubicacion -->
-        <p>Direccion: Av. Eva Peron 1980</p>
-        <p>E3200 Concordia, Entre Rios</p>
-        <p>0345-421-4174</p>
+        <!--Grid column-->
+      <div class="row">
+        <h2 class="text-center ubi">Estamos en:</h2>
+        <div class="col-md-6 text-center">
+          <ul class="list-unstyled mb-0">
+              <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                 <a href="https://www.google.com/maps?ll=-31.373961,-58.012663&z=17&t=m&hl=es-419&gl=AR&mapclient=embed&cid=9566184030273605600"  target="_blank"><p>Concordia, Entre Rios, Argentina</p></a>
+              </li>
+
+              <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                  <a  href="tel:+5493454214174" target="_blank"><p>3454166220</p></a>
+              </li>
+              <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                 <a href="contacto@lacasadelasllantas.com" target="_blank"><p>contacto@lacasadelasllantas.com</p></a>
+              </li>
+          </ul>
+      </div>
+      <!--Mapa-->
+      <div class="contacto__mapa text-center col-md-6">
+       
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d902.2547836601474!2d-58.01260617371327!3d-31.373863601085997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ade821530bf145%3A0x84c1e9b114790fe0!2sLa%20Casa%20de%20Las%20Llantas!5e0!3m2!1ses-419!2sar!4v1653608536154!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div> 
+</section>
+<!--Section: Contact v.2-->
+
+<section class="section-new">
+  <div class="container-fluid pb-5 pt-5">
+    <div class="newsletter-card p-3 p-md-4 text-white">
+      <div class="d-flex gap-3 pb-3 d-flex justify-content-center align-items-center">
+        <h3> Suscribite a nuestro newsletter </h3>
+      </div>
+      <div class="d-flex gap-4">
+        <input type="email" class="form-control py-3" id="inp1" placeholder="Dejanos tu email">
+        <button class="btn-new text-white px-4 py-2"> OK </button>
+      </div>
     </div>
-</footer>
+  </div>
+</section>
 
+      <!-- FOOTER -->
+      <footer class="container">
+        <p><a href="#main">Hacia arriba</a></p>
+        <div class="row">
+        <p  class="containerp col-md-8">© 2022 La Casa de las Lantas | Marca registrada | <a href="#">Políticas de Privacidad</a>|<a href="#">Terminos</a></p>
 
-</body>
-</html>
+        <div class="fooster__item col-md-4 d-flex justify-content-end">
+          <!--WhatsApp--> 
+          <a class="fooster__icon fab fa-whatsapp d-flex justify-content-center fa-3x"  href="https://api.whatsapp.com/send?phone=5493454166220&text=hola,%20me%20interesa%20esto:" target="_blank">
+            <!-- <img  alt="la casa de las llantas">     -->
+          </a>
+          <!--Facebook-->
+          <a class="fooster__icon fab fa-facebook d-flex justify-content-center align-items-start fa-3x" href="https://www.facebook.com/lacasadelasllantasconcordia/" target="_blank">
+            <!-- <img  src="../multimedia/image/face.png" alt="la casa de las llantas"> -->
+          </a>
+          <!--Instagram-->
+          <a class="fooster__icon fab fa-instagram d-flex justify-content-center fa-3x"  href="https://www.instagram.com/lacasadelasllantas/" target="_blank">
+            <!-- <img  src="../multimedia/image/insta.png" alt="la casa de las llantas">     -->
+          </a>
+        </div>
+      </div>
+      </footer>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js">document.onselectstart = function () {return true; };document.oncontextmenu = function () { return true; };document.onmousedown = function () { return true; }; document.onkeydown = function () {return true;};
+    </script>
+
+    <script>
+    function validateForm() {
+      var name =  document.getElementById('name').value;
+      if (name == "") {
+          document.querySelector('.status').innerHTML = "Name cannot be empty";
+          return false;
+      }
+      var email =  document.getElementById('email').value;
+      if (email == "") {
+          document.querySelector('.status').innerHTML = "Email cannot be empty";
+          return false;
+      } else {
+          var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          if(!re.test(email)){
+              document.querySelector('.status').innerHTML = "Email format invalid";
+              return false;
+          }
+      }
+      var subject =  document.getElementById('subject').value;
+      if (subject == "") {
+          document.querySelector('.status').innerHTML = "Subject cannot be empty";
+          return false;
+      }
+      var message =  document.getElementById('message').value;
+      if (message == "") {
+          document.querySelector('.status').innerHTML = "Message cannot be empty";
+          return false;
+      }
+      document.querySelector('.status').innerHTML = "Sending...";
+    }</script>
+
+  </body>
+</html> 

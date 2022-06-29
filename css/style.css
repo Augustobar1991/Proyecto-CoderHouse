@@ -1,441 +1,534 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
 }
 
 ul{
-    list-style: none;
-}
-
-img{
-    border-radius: 30px;
+  list-style: none;
 }
 
 a{
-    text-decoration: none;
+  text-decoration: none;
 }
 
 body{
-    background-color: rgb(14, 14, 14);
-    margin: 0;
+  background-color: rgb(14, 14, 14);
+  margin: 0;
+  padding-top: 12vh; 
 }
 
-html{
-    min-height: 100%;
-    position: relative;
-}
-
-/* inicio header */
+/* -------inicio header------- */
 header{
-    position: fixed;
-    top: 0; 
-    left: 0;
-    right: 0;
-    background: rgb(33, 33, 33);
-    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.3);
-    padding: 0px 2% 0 2%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 100;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  right: 0;
+  background: rgb(33, 33, 33);
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.3);
+  padding: 0px 2% 0 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
 }
-
 .cabeceraIcon{
-    width: 75px;
-    height: 75px;
-    margin: 5px;
+  width: 75px;
+  height: 75px;
+  margin: 8px;
 }
-
+.navbar ul{
+  padding: 0;
+  margin: 0;
+}
 .cabecera__lista li{
-    position: relative;
-    float: left;
+  position: relative;
+  float: left;
 }
-
 .cabecera__lista li a{
-    font-size: 18px;
-    padding: 20px;
-    color: rgb(255, 255, 255);
-    display: block;
+  font-size: 18px;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  display: block;
 }
-
 .cabecera__lista li a:hover{
-    background: rgb(175, 0, 0);
-    color: white;
-    text-align:  center;
-    width: 100%;
-    transition: all 0.3s;
+  background: rgb(175, 0, 0);
+  color: white;
+  text-align:  center;
+  width: 100%;
+  transition: all 0.3s;
 }
-
 .cabecera__sublista{
-    position: absolute;
-    width: 145px;
-    background: rgba(33, 33, 33, 0.7);
-    display: none;
+  position: absolute;
+  width: 145px;
+  background: rgba(33, 33, 33, 0.7);
+  display: none;
 }
-
 .cabecera__sublista li{
-    text-align:  center;
-    width: 100%;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  text-align:  center;
+  width: 100%;
+  border-bottom: 3px solid rgba(255, 0, 0, 0.6);
 }
-
 .cabecera__sublista li ul{
-    left: 200px;
-    top: 0;
+  top: 0;
 }
-
 .cabecera__lista li:focus-within > ul,
 .cabecera__lista li:hover > ul{
-    display: initial;
+  display: initial;
 }
-
 #menu-bar{
-    display: none;
+  display: none;
 }
-
 header label{
-    padding-right: 20px;
-    font-size: 20px;
-    color: rgb(255, 255, 255); 
-    cursor: pointer;
-    display: none;
+  padding-right: 20px;
+  font-size: 20px;
+  color: rgb(255, 255, 255); 
+  cursor: pointer;
+  display: none;
 }
-
 /* fin header */
 
-/* inicio section "inicio" */
-.sectionIndex{
-    padding-top: 16vh; 
-    display: grid;
-    justify-items:center;
-    align-items: center;
-    margin-bottom: 18vh;
+/* -------Carousel------- */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 1;
+}
+.carousel-item {
+  height: 35rem;
+  background-color: #777;
 } 
-.sectionIndex img{
-    width: 70%; 
+.carousel-item > img {
+  position: absolute;
+  top: -20px;
+  left: -40px;
+  min-width: 110%;
+  height: 120%; 
+  opacity: 0.7; 
+}
+.carousel-caption h2{
+  font-size: 2.5vw;
+  color: rgb(200, 2, 2);
+  padding: 2%;
+  font-weight: 1000;
+  font-style: italic;
+  text-transform:uppercase;
+  margin-bottom: 20rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  border: rgb(175, 0, 0) 5px solid;
+}
+.carousel-caption p{
+  font-size: 2vw;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 600;
+  font-style: italic;
+  text-transform:uppercase;
+}
+.carousel-caption {
+  left: 5%;
+  right: 50%;
+  bottom: 3rem;
+  padding: 0;
+}
+.carousel-indicators {
+  bottom: -2%;
+}
+.carousel-indicators [data-bs-target] {
+  width: 5%;
 }
 
-/* fin section "inicio" */
-
-/* inicio Automotores */
+/* -------inicio Automotores------- */
 .autos{
-    padding: 16vh 20px 0 20px;  
-    gap: 30px;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-bottom: 18vh;
-    position: relative;
+  padding: 10vh 20px 0 20px;
+  gap: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  position: relative;
 }
-
+.automotores{
+  position: relative;
+  top: 4.2vh;
+  margin-right: auto;
+  font-size: 30px;
+  color: rgba(255, 0, 0, 0.7);
+  font-weight: 600;
+  font-style: italic;
+  text-transform:uppercase;
+}
+.linea{
+  position: relative;
+  top: .5vh;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 0, 0, 0.7);
+  z-index: 50;
+}
 .card{
-    position: relative;
-    overflow: hidden;
-    width: 580px;
-    height: 580px;
+  position: relative;
+  overflow: hidden;
+  width: 580px;
+  height: 580px;
 }
-
 .card:hover{
-    transform: scale(1.03);
-    transition: all 1s ease;
+  transform: scale(1.03);
+  transition: all 1s ease;
 }
-
 .inputauto, .toggle{
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    bottom: 20px;
-    left: 46%;
-    outline: none;
-    z-index: 1;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+  left: 46%;
+  outline: none;
+  z-index: 1;
 }
-
 .inputauto{
-    opacity: 0;
+  opacity: 0;
 }
-
 .toggle{
-    pointer-events: none;
-    border-radius: 50%;
-    background: #fff;
-    transition: 0.5s;
-    text-align: center;
-    line-height: 50px;
-    font-size: 36px;
-    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+  border-radius: 50%;
+  background: #fff;
+  transition: 0.5s;
+  text-align: center;
+  line-height: 50px;
+  font-size: 36px;
+  box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.7);
 }
-
 .inputauto:checked ~ .toggle{
-    box-shadow: 0 0 0 700px rgba(255, 253, 253, 0.7);;
-    transform: rotate(225deg);
+  box-shadow: 0 0 0 700px rgba(255, 253, 253, 0.7);;
+  transform: rotate(225deg);
 }
-
 .imgBx, .details{
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-
 .details{
-    padding: 13%;
-    box-sizing: border-box;
-    z-index: 1;
-    pointer-events: none;
-    transition: 0.5s;
-    opacity: 0;
+  padding: 13%;
+  box-sizing: border-box;
+  z-index: 1;
+  pointer-events: none;
+  transition: 0.5s;
+  opacity: 0;
 }
-
 input:checked ~ .details{
-    opacity: 1;
-    transition-delay: 0.5s;
+  opacity: 1;
+  transition-delay: 0.5s;
 }
-
 .details h2{
-    margin-bottom: 16px;
-    font-size: 32px;
-    color: #000;
+  margin-bottom: 16px;
+  font-size: 32px;
+  color: #000;
 }
-
 .details h6 ul li{
-    font-size: 16px;
-    color: #000;
+  font-size: 16px;
+  color: #000;
 }
-
 #peugeot-308{
-    width: 100%;
-    border: 3px red solid;
+  width: 100%;
+  border: 3px red solid;
 }
-
 #gol-trend{
-    width: 100%;
-    border: 3px red solid;
+  width: 100%;
+  border: 3px red solid;
 }
 /* fin Automotores */
 
-/* inicio chapa y pintura */
-.section__pintura{
-    background-color: rgb(14, 14, 14);;
-    display: grid;
-    justify-items:center;
-    padding-top: 16vh; 
-    margin-bottom: 18vh;
-} 
-
-.section__pintura img{
-    width: 80%;;
-    border: 3px red solid;
+/* -------Inicio chapa y pintura------- */
+.chapa-y-pintura{
+  padding: 17vh 20px 0 20px;
 }
-/* fin chapa y pintura */
+.chapa-y-pintura img{
+  border-radius: 30px;
+  border: 3px red solid;
+}
+.chapaypintura{
+  position: relative;
+  top: -3vh;
+  font-size: 30px;
+  color: rgba(255, 0, 0, 0.7);
+  font-weight: 600;
+  font-style: italic;
+  text-transform:uppercase;
+}
+.lineacyp{
+  position: relative;
+  top: -3vh;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 0, 0, 0.7);
+  z-index: 50;
+}
+.lead{
+  color: #fff;
+  padding-top: 10%;
+  font-size: 2vw;
+}
+.col-md-7 h2{
+  font-size: 4vw;
+}
+.featurette-heading {
+  color: #fff;
+  font-weight: 300;
+  line-height: 1;
+  margin-top: 10%;
+}
+.col-md-7{
+  width: 50%;
+}
+.col-md-5 {
+  width: 50%;
+}
+.featurette-image{
+  width: 100%;
+  height: 100%;
+}
 
-/* inicio llantas */ 
+/* -------inicio llantas------- */
+.llantasp{
+  position: relative;
+  margin-right: auto;
+  top: -3vh;
+  font-size: 30px;
+  color: rgba(255, 0, 0, 0.7);
+  font-weight: 600;
+  font-style: italic;
+  text-transform:uppercase;
+}
+.lineallanta{
+  position: relative;
+  top: -3vh;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 0, 0, 0.7);
+  z-index: 50;
+}
 .llantas{
-    margin-top: 16vh; 
-    background-color: rgb(14, 14, 14);;
-    color: white;
-    margin-bottom: 18vh;
+  padding: 17vh 20px 0 20px;
+  background-color: rgb(14, 14, 14);;
+  color: white;
 }
-
+.llantas img{
+  border-radius: 30px;
+}
+.llantas img:hover{
+  transform: scale(1.1);
+  transition: all 1s ease;
+}
 .llantas__18{
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
-
 .llantas__18 div{
-    padding-bottom: 30px;
-    margin: auto;
+  padding-bottom: 30px;
+  margin: auto;
 }
-
 .llantas__18 img{
-    width: 30%;
-    border: 3px red solid;
-    width: 40vw;
+  width: 30%;
+  border: 3px red solid;
+  width: 40vw;
 }
-
 .llantas__17{
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
-
 .llantas__17 div{
-    padding-bottom: 30px;
-    margin: auto;
+  padding-bottom: 30px;
+  margin: auto;
 }
-
 .llantas__17 img{
-    border: 3px red solid;
-    width: 40vw;
+  border: 3px red solid;
+  width: 40vw;
 }
-
 .llantas__16{
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
-
 .llantas__16 div{
-    padding-bottom: 30px;
-    margin: auto;
+  padding-bottom: 30px;
+  margin: auto;
 }
-
 .llantas__16 img{
-    width: 30%;
-    border: 3px red solid;
-    width: 40vw;
+  width: 30%;
+  border: 3px red solid;
+  width: 40vw;
 }
-
-.llantas p{
-    display: flex;
-    justify-content:center;
-    align-items: flex-start;
+.llantasdiv p{
+  display: flex;
+  justify-content:center;
+  align-items: flex-start;
 }
 /* fin llantas */
 
-/* inicio contacto */
-.contacto{
-    background-color: rgb(14, 14, 14);
-    padding-top: 16vh; 
-    margin-bottom: 2vh;
+/* -------Contacto------- */
+.contactop{
+  padding: 17vh 20px 0 20px;
+  position: relative;
+  margin-right: auto;
+  top: -3vh;
+  font-size: 30px;
+  color: rgba(255, 0, 0, 0.7);
+  font-weight: 600;
+  font-style: italic;
+  text-transform:uppercase;
 }
-
+.lineacontacto{
+  position: relative;
+  top: -3vh;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 0, 0, 0.7);
+  z-index: 50;
+}
+#contacto{
+  color: #fff;
+}
+.contact {
+  max-width: 60%;
+  margin: 0px auto;
+}
+.newsletter-card {
+  max-width: 550px;
+  margin: 0px auto;
+  background-color: #680c0c;
+}
+.btn-new {
+  background-color: #00000063;
+  border-radius: 0.5rem;
+}
+.ubi{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
 .contacto__mapa iframe{
-padding: 30px;
+  width: 90%;
+  height: 100%;
+  border-radius: 20px;
 }
 
-.contacto__texto,
-.contacto__mapa{
-    width: 90%;
-    padding-left: 40px;
-    padding-bottom: 20px;
-    color: white;
+/* -------footer------- */
+
+.containerp{
+  color: #fff;
+  margin-top: 2%;
+}
+.fooster__item{
+padding-bottom: 2%;
+}
+.fooster__icon{
+  width: 30%;
+  color: #fff;
+}
+.fooster__icon:hover{
+  transform: translateY(-8px) scale(1.4);
+  transition: all 0.3s;
+}
+.fa-envelope:hover{
+  color: #0c1d68;
+  transform: translateY(-8px) scale(1.4);
+  transition: all 0.3s;
+}
+.fa-map-marker-alt:hover{
+  color: #1a680c;
+  transform: translateY(-8px) scale(1.4);
+  transition: all 0.3s;
+}
+.fa-phone:hover{
+  color: #0c5168;
+  transform: translateY(-8px) scale(1.4);
+  transition: all 0.3s;
+}
+.fa-facebook:hover{
+  color: #0c2699;
+}
+.fa-instagram:hover{
+  color: #e120e4;
+}
+.fa-whatsapp:hover{
+color: #35b81e;
 }
 
-.contacto__texto h2,
-.contacto__mapa h2{
-    display: grid;
-    justify-content:center;
-    background-color: rgb(175, 0, 0);
-    padding: 2%; 
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  .featurette-heading {
+    font-size: 50px;
+  }
 }
 
-.contacto__texto__area{
-    padding: 20px 0px 10px 10px; 
+@media (max-width: 992px){
+  .col-lg-4 {
+    flex: 0 0 auto;
+    height: 80%;
+  }
+  .rounded {
+    height: 20%;
+    width: 30%;
+    border: 3px red solid;
 }
-
-.contacto__texto__area__int{
-    padding: 10px; 
-    width: 100%; 
-    height: 200px;
-}
-
-.contacto__texto form ul li input{
-    width: 200px;
-    padding: 5px; 
-}
-
-.contacto__texto form ul li{
-    padding: 10px; 
-}
-
-.contacto__texto form ul li:first-child{
-    padding-top: 20px;  
-}
-/* fin section contacto */
-
-
-/* inicio footer */
-.footer{
-    background-color: rgb(14, 14, 14);
-    display: flex;
-    justify-content: space-between;
-    align-items:flex-end;
-    flex-wrap: nowrap;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-.fooster__item img:hover{
-    transform: translateY(-8px) scale(1.4);
-    transition: all 0.3s;
-}
-
-.footerContacto{
-    background-color: rgb(14, 14, 14);
-    display: flex;
-    align-items:flex-end;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-.fooster__mapa iframe{
-    width: 27vw;
-    height: 100px;
-    border-style: none;
-    border: 4px rgb(175, 0, 0) solid;
-}
-
-.fooster__ubicacion{
-    text-align: right;  
-    font-weight: bold; /*en negrita */
-    color: white;
-}
-/* fin footer */
-
-/* Inicio Media Query */
-@media (min-width:800px) {
-
-    .fooster__ubicacion p{
-        padding: 5px;
-    }
-
-    .fooster__icon{
-        width: 60px;
-        padding: 10px;
-    } 
-    
-    .contacto{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .contacto__mapa iframe{
-        width: 100%;
-        height: 90%;
-    }
 }
 
 @media(max-width:800px){
-    header{
-        padding: 0px 0.5% 0 0.5%;
+  header{
+      padding: 0px 0.5% 0 0.5%;
+  }
+  .cabecera__lista li a{
+      padding: 20px 8px;
+  }
+  /* inicio carousel */
+  .carousel-item {
+    height: 23rem;
+    background-color: #777;
+  }
+  .carousel-item > img {
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    min-width: 100%;
+    height: 110%; 
+  }
+  .carousel-caption h2{
+    font-weight: 600;
+    margin-bottom: 13rem;
+  }
+  .carousel-caption p{
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+    font-style: italic;
+    text-transform:uppercase;
+  } 
+  .carousel-caption {
+    left: 5%;
+    right: 50%;
+    bottom: 1.8rem;
+    padding: 0;
+  }
+  .automotores{
+    font-size: 3.7vw;
     }
-    .cabecera__lista li a{
-        padding: 20px 8px;
+  .chapaypintura{
+  font-size: 3.7vw;
+  }
+  .llantasp{
+    font-size: 3.7vw;
     }
-
-    .fooster__ubicacion p{
-        padding: 5px;
+  .contactop{
+    font-size: 3.7vw;
     }
-
-    .fooster__ubicacion{
-        font-size: 13px;
-    }
-
-    .fooster__icon{
-        width: 40px;
-        padding: 5px 5px;
-    } 
 }
 
 @media(max-width:600px){
-/*inicio header */
+  /*inicio header */
     header label{
         display: initial;
     }
-
     .navbar{
         position: absolute;
         top: 100%;
@@ -449,9 +542,9 @@ padding: 30px;
     .cabecera__sublista li{
         text-align:left;
     }
-    
     .cabecera__lista li{
         width: 100%;
+        border-bottom: 3px solid rgba(255, 0, 0, 0.6);
     }
     .cabecera__sublista{
         position: relative;
@@ -468,64 +561,46 @@ padding: 30px;
     #menu-bar:checked ~ .navbar{
         display: initial;
     }
-/* fin header */
 
-    .sectionIndex img{
-        width: 90%; 
-        border-radius: 30px;
+    /* Inicio carousel */
+    .carousel-item {
+      height: 15rem;
+      background-color: #777;
     }
-    
+    .carousel-item > img {
+      position: absolute;
+      top: 0px;
+      left: -20px;
+      min-width: 110%;
+      height: 110%; 
+    }
+    .carousel-caption h2{
+      font-weight: 600;
+      margin-bottom: 6.3rem;
+    }
+
+    /* automotores */
+    .sectionIndex img{
+      width: 90%; 
+      border-radius: 30px;
+    } 
     .card{
         width: 300px;
         height: 300px;
     }
-
     .details h2{
         margin-bottom: 16px;
         font-size: 20px;
         color: #000;
     }
-    
     .details h6 ul li{
         font-size: 11px;
         color: #000;
     }
-
-    .llantas img{
-        width: 70vw;
+    .autos{
+      padding: 9vh 20px 0 20px;
     }
-
-    .contacto__texto h2,
-    .contacto__mapa h2{
-        font-size:medium;
+    .chapa-y-pintura{
+      padding: 17vh 20px 0 20px;
     }
-
-    .contacto__texto form ul li input{
-        width: 200px;
-        padding: 5px; 
-    }
-
-    .section__pintura img {
-        width: 90%;
-    }    
-
-/* inicio fooster */
-    .fooster__ubicacion{
-        font-size: 8px;
-    }
-
-    .fooster__ubicacion p{
-        padding: 3px;
-    }
-    
-    .fooster__item{
-        display: flex;
-        flex-wrap: wrap;
-    } 
-    .fooster__icon{
-        width: 35px;
-    } 
-/* fin fooster */
-}
-
-/* Fin Media Query */
+}  
