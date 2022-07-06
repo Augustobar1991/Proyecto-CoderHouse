@@ -1,0 +1,67 @@
+/* -------footer------- */
+.container {
+  max-width: 100%;
+
+  & div{
+    margin-bottom: 10px;
+  }
+}
+.containerp{
+    border-style: solid;
+    border-width: 1px 0px 0px 0px;
+    border-color: #547173;
+    padding: 10px;
+}
+.containerSub {
+  color: $color-blanco;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+  .fab{
+    font-size: 3.5vw;
+    width: 70%;
+    color: $color-blanco;
+
+    &:hover{
+      transform: translateY(-8px) scale(1.2);
+      transition: all 0.3s;
+    }
+  }
+
+  .fa-envelope:hover{
+    color: #0c1d68;
+    transform: translateY(-8px) scale(1.4);
+    transition: all 0.3s;
+  }
+  .fa-map-marker-alt:hover{
+    color: #1a680c;
+    transform: translateY(-8px) scale(1.4);
+    transition: all 0.3s;
+  }
+  .fa-phone:hover{
+    color: #0c5168;
+    transform: translateY(-8px) scale(1.4);
+    transition: all 0.3s;
+  }
+  .fa-facebook:hover{
+    color: #0c2698 !important;
+  }
+  .fa-instagram:hover{
+    color: #e120e4;
+  }
+  .fa-whatsapp:hover{
+  color: #35b81e;
+  }
+  .bi-arrow-up-circle-fill{
+    font-size: 3vw; 
+    padding-right: 20px;
+    color: $color-blanco;
+    display: flex;
+    justify-content: end;
+  }
+  .bi-arrow-up-circle-fill:hover{
+    color: rgb(255, 0, 0);
+    transform: translateY(-4px) scale(1.2);
+    transition: all 0.5s;
+  }

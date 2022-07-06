@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0 ; 
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+  }
+  
+  ul{
+    list-style: none;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  body{
+    background-color: rgb(14, 14, 14);
+    margin: 0;
+    padding-top: 12vh; 
+  }
+
+@import 'base/variables';
+@import 'componentes/header';
+@import 'componentes/carousel';
+@import 'componentes/main';
+@import 'componentes/footer';
+@import 'componentes/media';
