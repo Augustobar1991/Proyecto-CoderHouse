@@ -1,0 +1,76 @@
+  /* -------inicio header------- */
+  header{
+    position: fixed;
+    top: 0; 
+    left: 0;
+    right: 0;
+    background: rgb(33, 33, 33);
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.3);
+    padding: 0px 2% 0 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+
+    & label{
+      padding-right: 20px;
+      font-size: 20px;
+      color: rgb(255, 255, 255); 
+      cursor: pointer;
+      display: none;
+    }
+  }
+  .cabeceraIcon{
+    width: 59px;
+    margin: 8px;
+  }
+  .navbar ul{
+    padding: 0;
+    margin: 0;
+  }
+  .cabecera__lista li{
+    position: relative;
+    float: left;
+
+    & a{
+      font-size: 18px;
+      padding: 15px 20px;
+      color: rgb(255, 255, 255);
+      display: block;
+    }
+    & a:hover{
+      background: rgb(175, 0, 0);
+      color: white;
+      text-align:  center;
+      width: 100%;
+      transition: all 0.3s;
+    }
+  }
+
+  .cabecera__sublista{
+    position: absolute;
+    width: 145px;
+    background: rgba(33, 33, 33, 0.7);
+    display: none;
+
+    & li{
+      text-align:  center;
+      width: 100%;
+      border-bottom: 3px solid rgba(255, 0, 0, 0.6);
+    }
+    & li ul{
+      top: 0;
+    }
+
+  }
+
+
+  .cabecera__lista li:focus-within > ul,
+  .cabecera__lista li:hover > ul{
+    display: initial;
+  }
+  #menu-bar{
+    display: none;
+  }
+
+  /* fin header */

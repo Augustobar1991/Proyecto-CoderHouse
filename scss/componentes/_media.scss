@@ -1,0 +1,219 @@
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+    .featurette-heading {
+      font-size: 50px;
+    }
+  }
+  
+  @media (max-width: 992px){
+    .col-lg-4 {
+      flex: 0 0 auto;
+      height: 80%;
+    }
+    .llantasdiv h3{
+      font-size: 3vw;
+    }
+    .fab{
+      font-size: 4.5vw;
+    }
+    .container{
+      max-width: 100%;
+    }
+    .carousel-caption h2{
+      font-size: 1.5rem;
+      width: 320px;
+    }
+    .carousel-caption h4{
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media(max-width:800px){
+    header{
+        padding: 0px 0.5% 0 0.5%;
+    }
+    .cabecera__lista li a{
+        padding: 15px 8px;
+    }
+    /* inicio carousel */
+    .carousel-item {
+      height: 23rem;
+
+      & > img {
+        position: absolute;
+        top: -10px;
+        left: 0px;
+        min-width: 200px;
+        height: 110%; 
+      }
+    }
+    .carousel-caption {
+      left: 5%;
+      bottom: 1.8rem;
+      padding: 0;
+
+      & h2{
+        font-weight: 600;
+        margin-bottom: 8rem;
+        width: 290px;
+      }
+      & img {
+        margin-bottom: 6rem;
+      }
+      & h4{
+        font-size: 0.8rem;
+      }
+    }
+    .btn{
+      font-size: 1rem;
+      --bs-btn-padding-y: 0.2rem;
+      --bs-btn-padding-x: 0.8rem;
+    }
+
+    .automotores{
+      font-size: 3.7vw;
+      }
+    .chapaypintura{
+    font-size: 3.7vw;
+    }
+    .llantasp{
+      font-size: 3.7vw;
+      }
+    .contactop{
+      font-size: 3.7vw;
+      }
+      .fab{
+        font-size: 5.5vw;
+      }
+      .bi-arrow-up-circle-fill{
+        font-size: 5.5vw; 
+      }
+      .containerSub {
+        font-size: 14px;
+      }
+  }
+  
+  @media(max-width:600px){
+    /*inicio header */
+      header label{
+          display: initial;
+      }
+      .navbar{
+          position: absolute;
+          top: 100%;
+          left: 0%;
+          right: 0%;
+          background: rgb(33, 33, 33);
+          border-top: 1px solid rgba(255, 255, 255, 0.3);
+          display: none;
+      }
+      .cabecera__lista li a:hover,
+      .cabecera__sublista li{
+          text-align:left;
+      }
+      .cabecera__lista li{
+          width: 100%;
+          border-bottom: 3px solid rgba(255, 0, 0, 0.6);
+      }
+      .cabecera__sublista{
+          position: relative;
+          text-align:left;
+          width: 100%;
+
+        & li{
+          background: rgb(66, 66, 66);;
+        }
+        & li ul{
+          left: 0%;
+          width: 100%;
+        }
+      }
+
+      #menu-bar:checked ~ .navbar{
+          display: initial;
+      }
+  
+      /* Inicio carousel */
+      .carousel-item {
+        height: 15rem;
+
+        & > img {
+          position: absolute;
+          top: 0px;
+          left: -20px;
+          min-width: 110%;
+          height: 110%; 
+        }
+      }
+
+      .carousel-caption h2{
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 3rem;
+        width: 215px;
+      }
+      .btn{
+        font-size: 0.7rem;
+        --bs-btn-padding-y: 0.2rem;
+        --bs-btn-padding-x: 0.8rem;
+      }
+      .carousel-caption img {
+        margin-bottom: 3rem;
+      }
+      .carousel-caption h4{
+        padding: 0rem;
+        font-size: 0.6rem;
+      } 
+  
+      /* automotores */
+      .sectionIndex img{
+        width: 90%; 
+        border-radius: 30px;
+      } 
+      .card{
+          width: 300px;
+          height: 300px;
+      }
+      .details h2{
+          margin-bottom: 16px;
+          font-size: 20px;
+          color: #000;
+      }
+      .details h6 ul li{
+          font-size: 11px;
+          color: #000;
+      }
+      .llantasdiv h3{
+        font-size: 3.5vw;
+      }
+      .fab{
+        font-size: 7vw;
+      }
+      .bi-arrow-up-circle-fill{
+        font-size: 7vw; 
+      }
+      .h1-responsive{
+        font-size: 4.5vw;
+      }
+      .texto{
+        font-size: 4.5vw;
+      }
+      .ubi{
+        font-size: 20px;
+      }
+      .list-unstyled p{
+        font-size: 14px;
+      }
+      .newsletter-card {
+        max-width: 450px;
+      }
+      .newsletter-card h3{
+        font-size: 20px;
+      }
+      .containerSub {
+        font-size: 12px;
+      }
+  }  
+  
