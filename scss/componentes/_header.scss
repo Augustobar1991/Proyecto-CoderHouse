@@ -7,15 +7,13 @@
     background: rgb(33, 33, 33);
     box-shadow: 0 5px 10px rgba(255, 255, 255, 0.3);
     padding: 0px 2% 0 2%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex(center, space-between,1);
     z-index: 100;
 
     & label{
       padding-right: 20px;
       font-size: 20px;
-      color: rgb(255, 255, 255); 
+      color: $color-blanco; 
       cursor: pointer;
       display: none;
     }
@@ -28,6 +26,7 @@
     padding: 0;
     margin: 0;
   }
+  
   .cabecera__lista li{
     position: relative;
     float: left;
@@ -35,12 +34,16 @@
     & a{
       font-size: 18px;
       padding: 15px 20px;
-      color: rgb(255, 255, 255);
+      color: $color-blanco;
       display: block;
     }
+    &:focus-within > ul,
+    &:hover > ul{
+      display: initial;
+    }
     & a:hover{
-      background: rgb(175, 0, 0);
-      color: white;
+      background: $color-rojoText;
+      color: $color-blanco;
       text-align:  center;
       width: 100%;
       transition: all 0.3s;
@@ -64,11 +67,6 @@
 
   }
 
-
-  .cabecera__lista li:focus-within > ul,
-  .cabecera__lista li:hover > ul{
-    display: initial;
-  }
   #menu-bar{
     display: none;
   }

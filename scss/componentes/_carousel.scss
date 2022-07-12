@@ -3,46 +3,49 @@
     z-index: 1;
     bottom: 4rem;
     left: 9%;
+    & h2{
+      font-size: map-get($carouselh2 , tamaño-de-fuente );
+      font-weight: map-get($carouselh2 , peso-de-fuente );
+      font-style: map-get($forma-de-texto , estilo-de-fuente );
+      text-transform: map-get($forma-de-texto , texto-transform );
+      color: $color-rojoText !important;
+      padding: 1%;
+      width: 420px;
+      margin-bottom: 10rem;
+      margin-right: 5rem;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 15px;
+      border: $color-rojoText 5px solid;
+    }
+    & h4{
+      font-size: map-get($carouselh4 , tamaño-de-fuente );
+      font-weight: map-get($carouselh4 , peso-de-fuente );
+      font-style: map-get($forma-de-texto , estilo-de-fuente );
+      text-transform: map-get($forma-de-texto , texto-transform );
+      padding: 0.5rem;
+      color: $color-blanco;
+    }
+    & img{
+      width: 17%;
+      margin-bottom: 7rem;
+    }
   }
   .carousel-item {
     height: 35rem;
     background-color: #777;
-    
+    & > img {
+      z-index: 1;
+      min-width: 1500px;
+      height: 120%; 
+      width: 110%;
+    }
   } 
-  .carousel-item > img {
-    z-index: 1;
-    min-width: 1500px;
-    height: 120%; 
-    width: 110%;
-  }
-  .carousel-control-next, .carousel-control-prev{
+
+  .carousel-control-next{
     width: 9%;
   }
-  .carousel-caption h2{
-    font-size: 2rem;
-    color: rgb(200, 2, 2) !important;
-    padding: 1%;
-    width: 420px;
-    font-weight: 1000;
-    font-style: italic;
-    text-transform:uppercase;
-    margin-bottom: 10rem;
-    margin-right: 5rem;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 15px;
-    border: rgb(175, 0, 0) 5px solid;
-  }
-  .carousel-caption h4{
-    padding: 0.5rem;
-    font-weight: 800;
-    font-size: 1.5rem;
-    font-style: italic;
-    text-transform:uppercase;
-    color: $color-blanco;
-  }
-  .carousel-caption img{
-    width: 17%;
-    margin-bottom: 7rem;
+  .carousel-control-prev{
+    @extend .carousel-control-next;
   }
   .carousel-indicators {
     bottom: -2%;

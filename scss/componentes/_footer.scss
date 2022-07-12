@@ -6,6 +6,9 @@
     margin-bottom: 10px;
   }
 }
+.flecha{
+  @include flex(0, end,0);
+}
 .containerp{
     border-style: solid;
     border-width: 1px 0px 0px 0px;
@@ -14,54 +17,53 @@
 }
 .containerSub {
   color: $color-blanco;
-  display: flex;
-  justify-content: center;
+  @include flex(0, center,0);
   margin: 0;
 }
-  .fab{
-    font-size: 3.5vw;
-    width: 70%;
-    color: $color-blanco;
+.fab{
+  font-size: 3.5vw;
+  width: 70%;
+  color: $color-blanco;
 
-    &:hover{
-      transform: translateY(-8px) scale(1.2);
-      transition: all 0.3s;
+  &:hover{
+    transform: translateY(-8px) scale(1.2);
+    transition: all 0.3s;
+  }
+}
+
+  $marker: (
+    envelope: #0c1d68,
+    map-marker-alt:  #1a680c,
+    phone: #0c5168
+  ); 
+  @each $marker, $color in $marker {
+  .fa-#{$marker}:hover {
+    color: $color;
+    transform: translateY(-8px) scale(1.4);
+    transition: all 0.3s;
     }
   }
 
-  .fa-envelope:hover{
-    color: #0c1d68;
-    transform: translateY(-8px) scale(1.4);
-    transition: all 0.3s;
+  $redes: (
+    instagram: #e120e4,
+    facebook:  #0c2698,
+    whatsapp: #35b81e
+  ); 
+  @each $red, $color in $redes {
+  .fa-#{$red}:hover {
+    color: $color;
+    }
   }
-  .fa-map-marker-alt:hover{
-    color: #1a680c;
-    transform: translateY(-8px) scale(1.4);
-    transition: all 0.3s;
-  }
-  .fa-phone:hover{
-    color: #0c5168;
-    transform: translateY(-8px) scale(1.4);
-    transition: all 0.3s;
-  }
-  .fa-facebook:hover{
-    color: #0c2698 !important;
-  }
-  .fa-instagram:hover{
-    color: #e120e4;
-  }
-  .fa-whatsapp:hover{
-  color: #35b81e;
-  }
+
   .bi-arrow-up-circle-fill{
     font-size: 3vw; 
     padding-right: 20px;
     color: $color-blanco;
-    display: flex;
-    justify-content: end;
-  }
-  .bi-arrow-up-circle-fill:hover{
-    color: rgb(255, 0, 0);
-    transform: translateY(-4px) scale(1.2);
-    transition: all 0.5s;
+    @include flex(0, end,0);
+
+    &:hover{
+      color: $color-rojoText;
+      transform: translateY(-4px) scale(1.2);
+      transition: all 0.5s;
+    }
   }

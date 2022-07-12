@@ -1,0 +1,25 @@
+@mixin flex($align,$justify,$sino){
+    @if ($sino==1) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    }
+    @else
+    {
+        display: flex;
+        justify-content: $justify;
+    }
+}
+
+
+@mixin flexdir($wrap,$dir,$sino){
+    @if ($sino==1) {
+        display: flex;
+        flex-wrap: $wrap;
+        flex-direction:$dir;
+    }
+    @else{
+        display: flex;
+        flex-wrap: $wrap;
+    }
+}
