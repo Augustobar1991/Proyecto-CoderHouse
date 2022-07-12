@@ -21,12 +21,15 @@
     .container{
       max-width: 100%;
     }
-    .carousel-caption h2{
-      font-size: 1.5rem;
-      width: 320px;
-    }
-    .carousel-caption h4{
-      font-size: 1.2rem;
+
+    .carousel-caption{ 
+      & h2{
+        font-size: 1.5rem;
+        width: 320px;
+      }
+      & h4{
+        font-size: 1.2rem;
+      }
     }
   }
   
@@ -80,19 +83,19 @@
     }
     .llantasp{
       font-size: 3.7vw;
-      }
+    }
     .contactop{
       font-size: 3.7vw;
-      }
-      .fab{
-        font-size: 5.5vw;
-      }
-      .bi-arrow-up-circle-fill{
-        font-size: 5.5vw; 
-      }
-      .containerSub {
-        font-size: 14px;
-      }
+    }
+    .fab{
+      font-size: 5.5vw;
+    }
+    .bi-arrow-up-circle-fill{
+      font-size: 5.5vw; 
+    }
+    .containerSub {
+      font-size: 14px;
+    }
   }
   
   @media(max-width:600px){
@@ -109,13 +112,11 @@
           border-top: 1px solid rgba(255, 255, 255, 0.3);
           display: none;
       }
-      .cabecera__lista li a:hover,
-      .cabecera__sublista li{
-          text-align:left;
-      }
+
       .cabecera__lista li{
           width: 100%;
           border-bottom: 3px solid rgba(255, 0, 0, 0.6);
+          
       }
       .cabecera__sublista{
           position: relative;
@@ -148,25 +149,26 @@
         }
       }
 
-      .carousel-caption h2{
-        font-weight: 600;
-        font-size: 18px;
-        margin-bottom: 3rem;
-        width: 215px;
-      }
+      .carousel-caption{
+        & h2{
+          font-weight: 600;
+          font-size: 18px;
+          margin-bottom: 3rem;
+          width: 215px;
+        }
+        & img {
+          margin-bottom: 3rem;
+        }
+        & h4{
+          padding: 0rem;
+          font-size: 0.6rem;
+        }
+    } 
       .btn{
         font-size: 0.7rem;
         --bs-btn-padding-y: 0.2rem;
         --bs-btn-padding-x: 0.8rem;
       }
-      .carousel-caption img {
-        margin-bottom: 3rem;
-      }
-      .carousel-caption h4{
-        padding: 0rem;
-        font-size: 0.6rem;
-      } 
-  
       /* automotores */
       .sectionIndex img{
         width: 90%; 
@@ -176,15 +178,18 @@
           width: 300px;
           height: 300px;
       }
-      .details h2{
+      .details{
+        & h2{
           margin-bottom: 16px;
           font-size: 20px;
           color: #000;
-      }
-      .details h6 ul li{
+        }
+        & h6 ul li{
           font-size: 11px;
           color: #000;
+        }
       }
+
       .llantasdiv h3{
         font-size: 3.5vw;
       }
@@ -208,10 +213,11 @@
       }
       .newsletter-card {
         max-width: 450px;
+        & h3{
+          font-size: 20px;
+        }
       }
-      .newsletter-card h3{
-        font-size: 20px;
-      }
+
       .containerSub {
         font-size: 12px;
       }
