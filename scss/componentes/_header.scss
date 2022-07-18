@@ -1,74 +1,123 @@
   /* -------inicio header------- */
-  header{
-    position: fixed;
-    top: 0; 
-    left: 0;
-    right: 0;
-    background: rgb(33, 33, 33);
-    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.3);
-    padding: 0px 2% 0 2%;
-    @include flex(center, space-between,1);
-    z-index: 100;
+header{
+  position: fixed;
+  top: 0; 
+  left: 0;
+  right: 0;
+  background: rgb(33, 33, 33);
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.3);
+  padding: 0px 2% 0 2%;
+  @include flex(center, space-between,1);
+  z-index: 100;
 
-    & label{
-      padding-right: 20px;
-      font-size: 20px;
-      color: $color-blanco; 
-      cursor: pointer;
-      display: none;
-    }
-  }
   .cabeceraIcon{
     width: 59px;
     margin: 8px;
+  }
+
+  label{
+    padding-right: 20px;
+    font-size: 20px;
+    color: $color-blanco; 
+    cursor: pointer;
+    display: none;
   }
   .navbar ul{
     padding: 0;
     margin: 0;
   }
-  
-  .cabecera__lista li{
-    position: relative;
-    float: left;
+    .cabecera__lista{
+      li{
+        position: relative;
+        float: left;
 
-    & a{
-      font-size: 18px;
-      padding: 15px 20px;
-      color: $color-blanco;
-      display: block;
+          a{
+            font-size: 18px;
+            padding: 15px 20px;
+            color: $color-blanco;
+            display: block;
+          }
+          &:focus-within > ul,
+          &:hover > ul{
+            display: initial;
+            // text-align: start;
+          }
+          & a:hover{
+            background: $color-rojoText;
+            color: $color-blanco;
+            text-align: start;
+            width: 100%;
+            transition: all 0.3s;
+          }
+          .cabecera__sublista{
+            position: absolute;
+            width: 145px;
+            background: rgba(33, 33, 33, 0.7);
+            display: none;
+          
+             li{
+              text-align:  start;
+              width: 100%;
+              border-bottom: 3px solid rgba(255, 0, 0, 0.6);
+              ul{
+                top: 0;
+              } 
+             }
+            }
+      }
     }
-    &:focus-within > ul,
-    &:hover > ul{
-      display: initial;
+    #menu-bar{
+      display: none;
     }
-    & a:hover{
-      background: $color-rojoText;
-      color: $color-blanco;
-      text-align:  center;
-      width: 100%;
-      transition: all 0.3s;
+}
+
+
+@media(max-width:800px){
+  header{
+    padding: 0px 0.5% 0 0.5%;
+    .cabecera__lista li a{
+      padding: 15px 8px;
     }
   }
 
-  .cabecera__sublista{
-    position: absolute;
-    width: 145px;
-    background: rgba(33, 33, 33, 0.7);
-    display: none;
+}
 
-    & li{
-      text-align:  center;
-      width: 100%;
-      border-bottom: 3px solid rgba(255, 0, 0, 0.6);
-    }
-    & li ul{
-      top: 0;
-    }
+@media(max-width:600px){
+    header{
+      label{
+        display: initial;
+      }
+      .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        right: 0%;
+        background: rgb(33, 33, 33);
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        display: none;
+      }
+      .cabecera__lista li{
+        width: 100%;
+        border-bottom: 3px solid rgba(255, 0, 0, 0.6);
 
+        .cabecera__sublista{
+          position: relative;
+          text-align:left;
+          width: 100%;
+    
+        li{
+          background: rgb(66, 66, 66);
+          ul{
+            left: 0%;
+            width: 100%;
+          }
+        }
+
+        }
+      }
   }
-
-  #menu-bar{
-    display: none;
+  #menu-bar:checked ~ .navbar{
+    display: initial;
   }
-
+}
   /* fin header */

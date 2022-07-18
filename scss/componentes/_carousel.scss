@@ -1,16 +1,16 @@
 /* -------Carousel------- */
-.carousel-caption {
+.carousel-texto {
     z-index: 1;
     bottom: 4rem;
     left: 9%;
-    & h2{
-      font-size: map-get($carouselh2 , tamaño-de-fuente );
-      font-weight: map-get($carouselh2 , peso-de-fuente );
+    & h1{
+      font-size: map-get($carouselh1 , tamanio-de-fuente );
+      font-weight: map-get($carouselh1 , peso-de-fuente );
       font-style: map-get($forma-de-texto , estilo-de-fuente );
       text-transform: map-get($forma-de-texto , texto-transform );
       color: $color-rojoText !important;
       padding: 1%;
-      width: 420px;
+      width: 425px;
       margin-bottom: 10rem;
       margin-right: 5rem;
       background: rgba(0, 0, 0, 0.4);
@@ -18,7 +18,7 @@
       border: $color-rojoText 5px solid;
     }
     & h4{
-      font-size: map-get($carouselh4 , tamaño-de-fuente );
+      font-size: map-get($carouselh4 , tamanio-de-fuente );
       font-weight: map-get($carouselh4 , peso-de-fuente );
       font-style: map-get($forma-de-texto , estilo-de-fuente );
       text-transform: map-get($forma-de-texto , texto-transform );
@@ -30,7 +30,7 @@
       margin-bottom: 7rem;
     }
   }
-  .carousel-item {
+  .carousel-otro {
     height: 35rem;
     background-color: #777;
     & > img {
@@ -40,7 +40,7 @@
       width: 110%;
     }
   } 
-
+//comandos de bootstrap hechos por defecto
   .carousel-control-next{
     width: 9%;
   }

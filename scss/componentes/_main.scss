@@ -1,5 +1,5 @@
 /* -------inicio Automotores------- */
-#automotores{
+  #automotores{
     padding: 50px 20px 0 20px;
   }
   .autos{
@@ -36,6 +36,7 @@
     background: $color-rojizo;
     z-index: 50;
   }
+  //No Son Comandos de Bootstrap
   .card{
     position: relative;
     overflow: hidden;
@@ -136,7 +137,7 @@
     background: $color-rojizo;
     z-index: 50;
   }
-  .lead{
+  .texto-chapaypintura{
     padding-left: 1%;
   
     & li{
@@ -146,26 +147,26 @@
     font-size: 2vw;
   }
 }
-  .col-md-7 h2{
+.titulochapaypint{
+  width: 50%;
+
+  &h2{
     font-size: 3vw;
-  }
-  .featurette-heading {
     color: $color-blanco;
     font-weight: 300;
     line-height: 1;
     margin-top: 10%;
   }
-  .col-md-7{
+}
+
+  .imagenchapaypint {
     width: 50%;
-  }
-  .col-md-5 {
-    width: 50%;
-  }
-  .featurette-image{
-    width: 100%;
-    height: 100%;
-  }
   
+    & img{
+      width: 100%;
+      height: 100%;
+    }
+  }
   /* -------inicio llantas------- */
   .llantas{
     padding: 100px 20px 0 20px;
@@ -278,12 +279,12 @@
     max-width: 60%;
     margin: 0px auto;
   }
-  .newsletter-card {
+  .suscripcion {
     max-width: 550px;
     margin: 0px auto;
     background-color: #680c0c;
   }
-  .btn-new {
+  .texto-suscipcion {
     background-color: #00000063;
     border-radius: 0.5rem;
   }
@@ -297,6 +298,3 @@
     border-radius: 20px;
   }
 
-  .pt-5 {
-    padding-top: 15px !important;
-  }

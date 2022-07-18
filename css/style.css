@@ -34,6 +34,10 @@ header {
   justify-content: space-between;
   z-index: 100;
 }
+header .cabeceraIcon {
+  width: 59px;
+  margin: 8px;
+}
 header label {
   padding-right: 20px;
   font-size: 20px;
@@ -41,79 +45,111 @@ header label {
   cursor: pointer;
   display: none;
 }
-
-.cabeceraIcon {
-  width: 59px;
-  margin: 8px;
-}
-
-.navbar ul {
+header .navbar ul {
   padding: 0;
   margin: 0;
 }
-
-.cabecera__lista li {
+header .cabecera__lista li {
   position: relative;
   float: left;
 }
-.cabecera__lista li a {
+header .cabecera__lista li a {
   font-size: 18px;
   padding: 15px 20px;
   color: #fff;
   display: block;
 }
-.cabecera__lista li:focus-within > ul, .cabecera__lista li:hover > ul {
+header .cabecera__lista li:focus-within > ul, header .cabecera__lista li:hover > ul {
   display: initial;
 }
-.cabecera__lista li a:hover {
+header .cabecera__lista li a:hover {
   background: rgb(200, 2, 2);
   color: #fff;
-  text-align: center;
+  text-align: start;
   width: 100%;
   transition: all 0.3s;
 }
-
-.cabecera__sublista {
+header .cabecera__lista li .cabecera__sublista {
   position: absolute;
   width: 145px;
   background: rgba(33, 33, 33, 0.7);
   display: none;
 }
-.cabecera__sublista li {
-  text-align: center;
+header .cabecera__lista li .cabecera__sublista li {
+  text-align: start;
   width: 100%;
   border-bottom: 3px solid rgba(255, 0, 0, 0.6);
 }
-.cabecera__sublista li ul {
+header .cabecera__lista li .cabecera__sublista li ul {
   top: 0;
 }
-
-#menu-bar {
+header #menu-bar {
   display: none;
 }
 
+@media (max-width: 800px) {
+  header {
+    padding: 0px 0.5% 0 0.5%;
+  }
+  header .cabecera__lista li a {
+    padding: 15px 8px;
+  }
+}
+@media (max-width: 600px) {
+  header label {
+    display: initial;
+  }
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    right: 0%;
+    background: rgb(33, 33, 33);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    display: none;
+  }
+  header .cabecera__lista li {
+    width: 100%;
+    border-bottom: 3px solid rgba(255, 0, 0, 0.6);
+  }
+  header .cabecera__lista li .cabecera__sublista {
+    position: relative;
+    text-align: left;
+    width: 100%;
+  }
+  header .cabecera__lista li .cabecera__sublista li {
+    background: rgb(66, 66, 66);
+  }
+  header .cabecera__lista li .cabecera__sublista li ul {
+    left: 0%;
+    width: 100%;
+  }
+  #menu-bar:checked ~ .navbar {
+    display: initial;
+  }
+}
 /* fin header */
 /* -------Carousel------- */
-.carousel-caption {
+.carousel-texto {
   z-index: 1;
   bottom: 4rem;
   left: 9%;
 }
-.carousel-caption h2 {
+.carousel-texto h1 {
   font-size: 2rem;
   font-weight: 1000;
   font-style: italic;
   text-transform: uppercase;
   color: rgb(200, 2, 2) !important;
   padding: 1%;
-  width: 420px;
+  width: 425px;
   margin-bottom: 10rem;
   margin-right: 5rem;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   border: rgb(200, 2, 2) 5px solid;
 }
-.carousel-caption h4 {
+.carousel-texto h4 {
   font-size: 1.5rem;
   font-weight: 800;
   font-style: italic;
@@ -121,16 +157,16 @@ header label {
   padding: 0.5rem;
   color: #fff;
 }
-.carousel-caption img {
+.carousel-texto img {
   width: 17%;
   margin-bottom: 7rem;
 }
 
-.carousel-item {
+.carousel-otro {
   height: 35rem;
   background-color: #777;
 }
-.carousel-item > img {
+.carousel-otro > img {
   z-index: 1;
   min-width: 1500px;
   height: 120%;
@@ -303,36 +339,31 @@ input:checked ~ .details {
   z-index: 50;
 }
 
-.lead {
+.texto-chapaypintura {
   padding-left: 1%;
 }
-.lead li {
+.texto-chapaypintura li {
   color: #fff;
   padding-top: 10%;
   padding-left: 1%;
   font-size: 2vw;
 }
 
-.col-md-7 h2 {
-  font-size: 3vw;
+.titulochapaypint {
+  width: 50%;
 }
-
-.featurette-heading {
+.titulochapaypinth2 {
+  font-size: 3vw;
   color: #fff;
   font-weight: 300;
   line-height: 1;
   margin-top: 10%;
 }
 
-.col-md-7 {
+.imagenchapaypint {
   width: 50%;
 }
-
-.col-md-5 {
-  width: 50%;
-}
-
-.featurette-image {
+.imagenchapaypint img {
   width: 100%;
   height: 100%;
 }
@@ -462,13 +493,13 @@ input:checked ~ .details {
   margin: 0px auto;
 }
 
-.newsletter-card {
+.suscripcion {
   max-width: 550px;
   margin: 0px auto;
   background-color: #680c0c;
 }
 
-.btn-new {
+.texto-suscipcion {
   background-color: rgba(0, 0, 0, 0.3882352941);
   border-radius: 0.5rem;
 }
@@ -482,10 +513,6 @@ input:checked ~ .details {
   width: 90%;
   height: 100%;
   border-radius: 20px;
-}
-
-.pt-5 {
-  padding-top: 15px !important;
 }
 
 /* -------footer------- */
@@ -555,14 +582,14 @@ input:checked ~ .details {
   color: #35b81e;
 }
 
-.bi-arrow-up-circle-fill {
+.flecha1 {
   font-size: 3vw;
   padding-right: 20px;
   color: #fff;
   display: flex;
   justify-content: end;
 }
-.bi-arrow-up-circle-fill:hover {
+.flecha1:hover {
   color: rgb(200, 2, 2);
   transform: translateY(-4px) scale(1.2);
   transition: all 0.5s;
@@ -571,15 +598,11 @@ input:checked ~ .details {
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 @media (min-width: 40em) {
-  .featurette-heading {
+  .titulochapaypint h2 {
     font-size: 50px;
   }
 }
 @media (max-width: 992px) {
-  .col-lg-4 {
-    flex: 0 0 auto;
-    height: 80%;
-  }
   .llantasdiv h3 {
     font-size: 3vw;
   }
@@ -589,46 +612,40 @@ input:checked ~ .details {
   .container {
     max-width: 100%;
   }
-  .carousel-caption h2 {
+  .carousel-texto h1 {
     font-size: 1.5rem;
     width: 320px;
   }
-  .carousel-caption h4 {
+  .carousel-texto h4 {
     font-size: 1.2rem;
   }
 }
 @media (max-width: 800px) {
-  header {
-    padding: 0px 0.5% 0 0.5%;
-  }
-  .cabecera__lista li a {
-    padding: 15px 8px;
-  }
   /* inicio carousel */
-  .carousel-item {
+  .carousel-otro {
     height: 23rem;
   }
-  .carousel-item > img {
+  .carousel-otro > img {
     position: absolute;
     top: -10px;
     left: 0px;
     min-width: 200px;
     height: 110%;
   }
-  .carousel-caption {
+  .carousel-texto {
     left: 5%;
     bottom: 1.8rem;
     padding: 0;
   }
-  .carousel-caption h2 {
+  .carousel-texto h1 {
     font-weight: 600;
     margin-bottom: 8rem;
     width: 290px;
   }
-  .carousel-caption img {
+  .carousel-texto img {
     margin-bottom: 6rem;
   }
-  .carousel-caption h4 {
+  .carousel-texto h4 {
     font-size: 0.8rem;
   }
   .btn {
@@ -651,7 +668,7 @@ input:checked ~ .details {
   .fab {
     font-size: 5.5vw;
   }
-  .bi-arrow-up-circle-fill {
+  .flecha1 {
     font-size: 5.5vw;
   }
   .containerSub {
@@ -659,59 +676,27 @@ input:checked ~ .details {
   }
 }
 @media (max-width: 600px) {
-  /*inicio header */
-  header label {
-    display: initial;
-  }
-  .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0%;
-    right: 0%;
-    background: rgb(33, 33, 33);
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    display: none;
-  }
-  .cabecera__lista li {
-    width: 100%;
-    border-bottom: 3px solid rgba(255, 0, 0, 0.6);
-  }
-  .cabecera__sublista {
-    position: relative;
-    text-align: left;
-    width: 100%;
-  }
-  .cabecera__sublista li {
-    background: rgb(66, 66, 66);
-  }
-  .cabecera__sublista li ul {
-    left: 0%;
-    width: 100%;
-  }
-  #menu-bar:checked ~ .navbar {
-    display: initial;
-  }
   /* Inicio carousel */
-  .carousel-item {
+  .carousel-otro {
     height: 15rem;
   }
-  .carousel-item > img {
+  .carousel-otro > img {
     position: absolute;
     top: 0px;
     left: -20px;
     min-width: 110%;
     height: 110%;
   }
-  .carousel-caption h2 {
+  .carousel-texto h1 {
     font-weight: 600;
     font-size: 18px;
     margin-bottom: 3rem;
     width: 215px;
   }
-  .carousel-caption img {
+  .carousel-texto img {
     margin-bottom: 3rem;
   }
-  .carousel-caption h4 {
+  .carousel-texto h4 {
     padding: 0rem;
     font-size: 0.6rem;
   }
@@ -747,7 +732,7 @@ input:checked ~ .details {
   .bi-arrow-up-circle-fill {
     font-size: 7vw;
   }
-  .h1-responsive {
+  .h2-responsive {
     font-size: 4.5vw;
   }
   .texto {
@@ -759,10 +744,10 @@ input:checked ~ .details {
   .list-unstyled p {
     font-size: 14px;
   }
-  .newsletter-card {
+  .suscripcion {
     max-width: 450px;
   }
-  .newsletter-card h3 {
+  .suscripcion h3 {
     font-size: 20px;
   }
   .containerSub {
