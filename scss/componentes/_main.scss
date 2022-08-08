@@ -7,7 +7,17 @@
     @include flex(0, space-evenly,0);
     flex-wrap: wrap;
     position: relative;
-    padding-top: 50px;
+    padding-top: 10px;
+  }
+  .txtAutomotores{
+    padding-top: 30px;
+    padding-left: 1vw;
+  }
+  .txtAutomotores li {
+    color: $color-blanco;
+    padding-top: 5px;
+    padding-left: 5px;
+    font-size: 1.5vw;
   }
   .contactop{
     position: relative;
@@ -113,10 +123,17 @@
   /* -------Inicio chapa y pintura------- */
   .chapa-y-pintura{
     padding: 100px 20px 0 20px;
-
+  }
+  .imagenchapaypint {
+    width: 50%;
+  
     & img{
       border-radius: 30px;
       border: 3px red solid;
+      width: 80%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
     }
   }
 
@@ -137,46 +154,209 @@
     background: $color-rojizo;
     z-index: 50;
   }
+  .titulochapaypinth2{
+    color: $color-blanco;
+    font-size: 1.9vw;
+    font-weight: 300;
+    line-height: 1;
+    margin-top: 1%;
+    display: flex;
+    justify-content: start;
+    text-decoration: underline;
+  }
   .texto-chapaypintura{
     padding-left: 1%;
   
     & li{
     color: $color-blanco;
-    padding-top: 10%;
+    padding-top: 1vw;
     padding-left: 1%;
-    font-size: 2vw;
+    font-size: 1.5vw;
   }
 }
 .titulochapaypint{
   width: 50%;
+  text-align:justify;
+  display: flex;
+  flex-direction: column;
+}
 
-  &h2{
-    font-size: 3vw;
-    color: $color-blanco;
-    font-weight: 300;
-    line-height: 1;
-    margin-top: 10%;
+/* -------Inicio Lubricentro------- */
+.lubricentro {
+  padding: 100px 20px 0 20px;
+}
+.imagenLubricentro {
+  width: 50%;
+   & img {
+    border-radius: 30px;
+    border: 3px red solid;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 
-  .imagenchapaypint {
-    width: 50%;
-  
-    & img{
-      width: 100%;
-      height: 100%;
-    }
+.lubricentroh2 {
+  position: relative;
+  top: -3vh;
+  font-size: 30px;
+  color: rgba(255, 0, 0, 0.7);
+  font-weight: 600;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.lineacyp {
+  position: relative;
+  top: -3vh;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 0, 0, 0.7);
+  z-index: 50;
+}
+
+.tituloLubricentro{
+  color: $color-blanco;
+  width: 50%;
+  display: flex;
+  align-items: center;
+
+}
+.texto-lubricentro {
+  padding-left: 1%;
+
+  & li {
+    color: $color-blanco;
+    font-size: 1.5vw;
+    margin-top: 4vw;
+    text-align:justify;
   }
+}
+
+
+/* -------Inicio Taller Mecanico------- */
+.tallermecanico {
+  padding: 100px 20px 0 20px;
+}
+.imagentallermecanico {
+  width: 50%;
+   & img {
+    border-radius: 30px;
+    border: 3px red solid;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.tallermecanicoh2 {
+  position: relative;
+  top: -3vh;
+  font-size: 30px;
+  color: rgba(255, 0, 0, 0.7);
+  font-weight: 600;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.lineacyp {
+  position: relative;
+  top: -3vh;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 0, 0, 0.7);
+  z-index: 50;
+}
+
+.titulotallermecanico{
+  color: $color-blanco;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.texto-tallermecanico{
+  padding-left: 1%;
+
+  & li {
+    color: $color-blanco;
+    font-size: 1.5vw;
+    margin-top: 1.5vw;
+    text-align:justify;
+  }
+}
+
   /* -------inicio llantas------- */
   .llantas{
     padding: 100px 20px 0 20px;
+    & h3{
+     color: $color-blanco;
+    }
   }
+  .imagenrepllantas {
+   width: 50%;
+   & img {
+    border-radius: 30px;
+    border: 3px red solid;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+  .titulorepllantash2{
+    color: $color-blanco;
+    display: flex;
+    align-items: center;  
+    text-decoration: underline;
+  }
+  
+  .lineacyp {
+    position: relative;
+    top: -3vh;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 0, 0, 0.7);
+    z-index: 50;
+  }
+  
+  .titulorepllantas {
+    color: $color-blanco;
+    width: 50%;
+    text-align:justify;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .texto-repllanta{
+  padding-left: 1%;
+
+     & li {
+    color: $color-blanco;
+    font-size: 1.5vw;
+    margin-top: 1vw;
+    text-align:justify;
+  }
+}
+.titulorventllantas{
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  color: $color-blanco;
+
+}
+
   .llantasdiv h3{
     @include flex(0, center,0);
     padding: 1%;
     background: $color-rojizo;
     color: $color-blanco;
     font-size: 2.5vw;
+  }
+
+  .ventaDeLlantas{
+    padding-bottom: 10px;
+    text-decoration: underline;
   }
   .llantasp{
     position: relative;
@@ -247,54 +427,61 @@
       width: 30%;
       width: 40vw;
     }
-  }
+  } 
 
-  /* fin llantas */
-  
-  /* -------Contacto------- */
-  #contacto{
-    padding: 100px 20px 0 20px;
+@media (max-width: 680px){
+  .txtAutomotores li{
+    font-size: 2.5vw;
   }
-  .contactop{
-    position: relative;
-    top: -3vh;
-    font-size: 30px;
-    color: $color-rojizo;
-    font-weight: 600;
-    font-style: map-get($forma-de-texto , estilo-de-fuente );
-    text-transform: map-get($forma-de-texto , texto-transform );
-  }
-  .lineacontacto{
-    position: relative;
-    top: -3vh;
+  .titulochapaypinth2{
+    font-size: 3vw;
+  }  
+  .titulochapaypint{
     width: 100%;
-    height: 4px;
-    background: $color-rojizo;
-    z-index: 50;
   }
-  #contacto{
-    color: $color-blanco;
+  .imagenchapaypint{
+    width: 100%;
+    & img{
+      width: 100%;
+    }
   }
-  .contact {
-    max-width: 60%;
-    margin: 0px auto;
+  .texto-chapaypintura li{
+    font-size: 2.5vw;
   }
-  .suscripcion {
-    max-width: 550px;
-    margin: 0px auto;
-    background-color: #680c0c;
+  .tituloLubricentro{
+    width: 100%;
   }
-  .texto-suscipcion {
-    background-color: #00000063;
-    border-radius: 0.5rem;
+  .imagenLubricentro{
+    width: 100%;
+    & img{
+      width: 100%;
+    }
   }
-  .ubi{
-    padding-top: 2rem;
-    padding-bottom: 15px;
+  .texto-lubricentro li{
+    font-size: 2.5vw;
   }
-  .contacto__mapa iframe{
-    width: 90%;
-    height: 100%;
-    border-radius: 20px;
+  .titulotallermecanico{
+    width: 100%;
   }
-
+  .imagentallermecanico{
+    width: 100%;
+    & img{
+      width: 100%;
+    }
+  }
+  .texto-tallermecanico li{
+    font-size: 2.5vw;
+  }
+  .texto-repllanta li {
+    font-size: 2.5vw;
+  }
+  .titulorepllantas{
+    width: 100%;
+  }
+  .imagenrepllantas{
+    width: 100%;
+    & img{
+      width: 100%;
+    }
+  }
+}

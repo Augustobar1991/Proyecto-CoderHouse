@@ -80,22 +80,41 @@ header .cabecera__lista li .cabecera__sublista li {
   width: 100%;
   border-bottom: 3px solid rgba(255, 0, 0, 0.6);
 }
-header .cabecera__lista li .cabecera__sublista li ul {
-  top: 0;
-}
 header #menu-bar {
   display: none;
 }
 
-@media (max-width: 800px) {
+.cabecera__sublista_sublista {
+  position: absolute;
+  width: 145px;
+  background: rgba(63, 63, 63, 0.7);
+  display: none;
+}
+
+.cabecera__sublista_sublista li {
+  text-align: start;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid rgba(255, 0, 0, 0.6);
+}
+
+@media (max-width: 1040px) {
   header {
     padding: 0px 0.5% 0 0.5%;
   }
   header .cabecera__lista li a {
-    padding: 15px 8px;
+    padding: 5px 8px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 840px) {
+  header {
+    padding: 0px 0.1% 0 0.1%;
+  }
+  header .cabecera__lista li a {
+    padding: 8px 5px;
+  }
+}
+@media (max-width: 800px) {
   header label {
     display: initial;
   }
@@ -121,6 +140,18 @@ header #menu-bar {
     background: rgb(66, 66, 66);
   }
   header .cabecera__lista li .cabecera__sublista li ul {
+    left: 0%;
+    width: 100%;
+  }
+  .cabecera__sublista_sublista {
+    position: relative;
+    text-align: left;
+    width: 100%;
+  }
+  .cabecera__sublista_sublista li {
+    background: rgb(66, 66, 66);
+  }
+  .cabecera__sublista_sublista li ul {
     left: 0%;
     width: 100%;
   }
@@ -196,7 +227,19 @@ header #menu-bar {
   justify-content: space-evenly;
   flex-wrap: wrap;
   position: relative;
-  padding-top: 50px;
+  padding-top: 10px;
+}
+
+.txtAutomotores {
+  padding-top: 30px;
+  padding-left: 1vw;
+}
+
+.txtAutomotores li {
+  color: #fff;
+  padding-top: 5px;
+  padding-left: 5px;
+  font-size: 1.5vw;
 }
 
 .contactop {
@@ -315,9 +358,17 @@ input:checked ~ .details {
 .chapa-y-pintura {
   padding: 100px 20px 0 20px;
 }
-.chapa-y-pintura img {
+
+.imagenchapaypint {
+  width: 50%;
+}
+.imagenchapaypint img {
   border-radius: 30px;
   border: 3px red solid;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .chapaypintura {
@@ -339,38 +390,198 @@ input:checked ~ .details {
   z-index: 50;
 }
 
+.titulochapaypinth2 {
+  color: #fff;
+  font-size: 1.9vw;
+  font-weight: 300;
+  line-height: 1;
+  margin-top: 1%;
+  display: flex;
+  justify-content: start;
+  text-decoration: underline;
+}
+
 .texto-chapaypintura {
   padding-left: 1%;
 }
 .texto-chapaypintura li {
   color: #fff;
-  padding-top: 10%;
+  padding-top: 1vw;
   padding-left: 1%;
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 
 .titulochapaypint {
   width: 50%;
-}
-.titulochapaypinth2 {
-  font-size: 3vw;
-  color: #fff;
-  font-weight: 300;
-  line-height: 1;
-  margin-top: 10%;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
 }
 
-.imagenchapaypint {
+/* -------Inicio Lubricentro------- */
+.lubricentro {
+  padding: 100px 20px 0 20px;
+}
+
+.imagenLubricentro {
   width: 50%;
 }
-.imagenchapaypint img {
-  width: 100%;
+.imagenLubricentro img {
+  border-radius: 30px;
+  border: 3px red solid;
+  width: 80%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.lubricentroh2 {
+  position: relative;
+  top: -3vh;
+  font-size: 30px;
+  color: rgba(255, 0, 0, 0.7);
+  font-weight: 600;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.lineacyp {
+  position: relative;
+  top: -3vh;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 0, 0, 0.7);
+  z-index: 50;
+}
+
+.tituloLubricentro {
+  color: #fff;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.texto-lubricentro {
+  padding-left: 1%;
+}
+.texto-lubricentro li {
+  color: #fff;
+  font-size: 1.5vw;
+  margin-top: 4vw;
+  text-align: justify;
+}
+
+/* -------Inicio Taller Mecanico------- */
+.tallermecanico {
+  padding: 100px 20px 0 20px;
+}
+
+.imagentallermecanico {
+  width: 50%;
+}
+.imagentallermecanico img {
+  border-radius: 30px;
+  border: 3px red solid;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.tallermecanicoh2 {
+  position: relative;
+  top: -3vh;
+  font-size: 30px;
+  color: rgba(255, 0, 0, 0.7);
+  font-weight: 600;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.lineacyp {
+  position: relative;
+  top: -3vh;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 0, 0, 0.7);
+  z-index: 50;
+}
+
+.titulotallermecanico {
+  color: #fff;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.texto-tallermecanico {
+  padding-left: 1%;
+}
+.texto-tallermecanico li {
+  color: #fff;
+  font-size: 1.5vw;
+  margin-top: 1.5vw;
+  text-align: justify;
 }
 
 /* -------inicio llantas------- */
 .llantas {
   padding: 100px 20px 0 20px;
+}
+.llantas h3 {
+  color: #fff;
+}
+
+.imagenrepllantas {
+  width: 50%;
+}
+.imagenrepllantas img {
+  border-radius: 30px;
+  border: 3px red solid;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.titulorepllantash2 {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: underline;
+}
+
+.lineacyp {
+  position: relative;
+  top: -3vh;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 0, 0, 0.7);
+  z-index: 50;
+}
+
+.titulorepllantas {
+  color: #fff;
+  width: 50%;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+}
+
+.texto-repllanta {
+  padding-left: 1%;
+}
+.texto-repllanta li {
+  color: #fff;
+  font-size: 1.5vw;
+  margin-top: 1vw;
+  text-align: justify;
+}
+
+.titulorventllantas {
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  color: #fff;
 }
 
 .llantasdiv h3 {
@@ -380,6 +591,11 @@ input:checked ~ .details {
   background: rgba(255, 0, 0, 0.7);
   color: #fff;
   font-size: 2.5vw;
+}
+
+.ventaDeLlantas {
+  padding-bottom: 10px;
+  text-decoration: underline;
 }
 
 .llantasp {
@@ -459,62 +675,62 @@ input:checked ~ .details {
   width: 40vw;
 }
 
-/* fin llantas */
-/* -------Contacto------- */
-#contacto {
-  padding: 100px 20px 0 20px;
+@media (max-width: 680px) {
+  .txtAutomotores li {
+    font-size: 2.5vw;
+  }
+  .titulochapaypinth2 {
+    font-size: 3vw;
+  }
+  .titulochapaypint {
+    width: 100%;
+  }
+  .imagenchapaypint {
+    width: 100%;
+  }
+  .imagenchapaypint img {
+    width: 100%;
+  }
+  .texto-chapaypintura li {
+    font-size: 2.5vw;
+  }
+  .tituloLubricentro {
+    width: 100%;
+  }
+  .imagenLubricentro {
+    width: 100%;
+  }
+  .imagenLubricentro img {
+    width: 100%;
+  }
+  .texto-lubricentro li {
+    font-size: 2.5vw;
+  }
+  .titulotallermecanico {
+    width: 100%;
+  }
+  .imagentallermecanico {
+    width: 100%;
+  }
+  .imagentallermecanico img {
+    width: 100%;
+  }
+  .texto-tallermecanico li {
+    font-size: 2.5vw;
+  }
+  .texto-repllanta li {
+    font-size: 2.5vw;
+  }
+  .titulorepllantas {
+    width: 100%;
+  }
+  .imagenrepllantas {
+    width: 100%;
+  }
+  .imagenrepllantas img {
+    width: 100%;
+  }
 }
-
-.contactop {
-  position: relative;
-  top: -3vh;
-  font-size: 30px;
-  color: rgba(255, 0, 0, 0.7);
-  font-weight: 600;
-  font-style: italic;
-  text-transform: uppercase;
-}
-
-.lineacontacto {
-  position: relative;
-  top: -3vh;
-  width: 100%;
-  height: 4px;
-  background: rgba(255, 0, 0, 0.7);
-  z-index: 50;
-}
-
-#contacto {
-  color: #fff;
-}
-
-.contact {
-  max-width: 60%;
-  margin: 0px auto;
-}
-
-.suscripcion {
-  max-width: 550px;
-  margin: 0px auto;
-  background-color: #680c0c;
-}
-
-.texto-suscipcion {
-  background-color: rgba(0, 0, 0, 0.3882352941);
-  border-radius: 0.5rem;
-}
-
-.ubi {
-  padding-top: 2rem;
-  padding-bottom: 15px;
-}
-
-.contacto__mapa iframe {
-  width: 90%;
-  height: 100%;
-  border-radius: 20px;
-}
-
 /* -------footer------- */
 .container {
   max-width: 100%;
@@ -595,13 +811,111 @@ input:checked ~ .details {
   transition: all 0.5s;
 }
 
-/* RESPONSIVE CSS
--------------------------------------------------- */
-@media (min-width: 40em) {
-  .titulochapaypint h2 {
-    font-size: 50px;
+/* -------Contacto------- */
+#contacto {
+  padding: 100px 20px 0 20px;
+}
+
+.contactop {
+  position: relative;
+  top: -3vh;
+  font-size: 30px;
+  color: rgba(255, 0, 0, 0.7);
+  font-weight: 600;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.lineacontacto {
+  position: relative;
+  top: -3vh;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 0, 0, 0.7);
+  z-index: 50;
+}
+
+#contacto {
+  color: #fff;
+}
+
+.contact {
+  max-width: 60%;
+  margin: 0px auto;
+}
+
+.suscripcion {
+  max-width: 550px;
+  margin: 0px auto;
+  background-color: #680c0c;
+}
+
+.texto-suscipcion {
+  background-color: rgba(0, 0, 0, 0.3882352941);
+  border-radius: 0.5rem;
+}
+
+.ubi {
+  padding-top: 2rem;
+  padding-bottom: 15px;
+}
+
+.contacto__mapa iframe {
+  width: 90%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+@media (max-width: 800px) {
+  .contactop {
+    font-size: 3.7vw;
+  }
+  .fab {
+    font-size: 5.5vw;
+  }
+  .flecha1 {
+    font-size: 5.5vw;
+  }
+  .containerSub {
+    font-size: 14px;
   }
 }
+@media (max-width: 768px) {
+  .espacioubi {
+    padding-top: 3vw;
+  }
+}
+@media (max-width: 600px) {
+  .fab {
+    font-size: 7vw;
+  }
+  .bi-arrow-up-circle-fill {
+    font-size: 7vw;
+  }
+  .h2-responsive {
+    font-size: 4.5vw;
+  }
+  .texto {
+    font-size: 4.5vw;
+  }
+  .ubi {
+    font-size: 20px;
+  }
+  .list-unstyled p {
+    font-size: 14px;
+  }
+  .suscripcion {
+    max-width: 450px;
+  }
+  .suscripcion h3 {
+    font-size: 20px;
+  }
+  .containerSub {
+    font-size: 12px;
+  }
+}
+/* RESPONSIVE CSS
+-------------------------------------------------- */
 @media (max-width: 992px) {
   .llantasdiv h3 {
     font-size: 3vw;
@@ -659,20 +973,20 @@ input:checked ~ .details {
   .chapaypintura {
     font-size: 3.7vw;
   }
+  .lubricentroh2 {
+    font-size: 3.7vw;
+  }
+  .tallermecanicoh2 {
+    font-size: 3.7vw;
+  }
   .llantasp {
     font-size: 3.7vw;
   }
-  .contactop {
-    font-size: 3.7vw;
+  .titulorepllantash2 {
+    font-size: 3.2vw;
   }
-  .fab {
-    font-size: 5.5vw;
-  }
-  .flecha1 {
-    font-size: 5.5vw;
-  }
-  .containerSub {
-    font-size: 14px;
+  .ventaDeLlantas {
+    font-size: 3.2vw;
   }
 }
 @media (max-width: 600px) {
@@ -725,33 +1039,6 @@ input:checked ~ .details {
   }
   .llantasdiv h3 {
     font-size: 3.5vw;
-  }
-  .fab {
-    font-size: 7vw;
-  }
-  .bi-arrow-up-circle-fill {
-    font-size: 7vw;
-  }
-  .h2-responsive {
-    font-size: 4.5vw;
-  }
-  .texto {
-    font-size: 4.5vw;
-  }
-  .ubi {
-    font-size: 20px;
-  }
-  .list-unstyled p {
-    font-size: 14px;
-  }
-  .suscripcion {
-    max-width: 450px;
-  }
-  .suscripcion h3 {
-    font-size: 20px;
-  }
-  .containerSub {
-    font-size: 12px;
   }
 }
 

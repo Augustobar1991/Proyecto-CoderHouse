@@ -1,11 +1,5 @@
 /* RESPONSIVE CSS
 -------------------------------------------------- */
-
-@media (min-width: 40em) {
-    .titulochapaypint h2 {
-      font-size: 50px;
-    }
-  }
   
   @media (max-width: 992px){
     .llantasdiv h3{
@@ -71,20 +65,20 @@
     .chapaypintura{
     font-size: 3.7vw;
     }
+    .lubricentroh2{
+      font-size: 3.7vw;
+    }
+    .tallermecanicoh2{
+      font-size: 3.7vw;
+    }
     .llantasp{
       font-size: 3.7vw;
     }
-    .contactop{
-      font-size: 3.7vw;
+    .titulorepllantash2{
+      font-size: 3.2vw;
     }
-    .fab{
-      font-size: 5.5vw;
-    }
-    .flecha1{
-      font-size: 5.5vw; 
-    }
-    .containerSub {
-      font-size: 14px;
+    .ventaDeLlantas{
+      font-size: 3.2vw;
     }
   }
   
@@ -146,33 +140,5 @@
       .llantasdiv h3{
         font-size: 3.5vw;
       }
-      .fab{
-        font-size: 7vw;
-      }
-      .bi-arrow-up-circle-fill{
-        font-size: 7vw; 
-      }
-      .h2-responsive{
-        font-size: 4.5vw;
-      }
-      .texto{
-        font-size: 4.5vw;
-      }
-      .ubi{
-        font-size: 20px;
-      }
-      .list-unstyled p{
-        font-size: 14px;
-      }
-      .suscripcion {
-        max-width: 450px;
-        & h3{
-          font-size: 20px;
-        }
-      }
-
-      .containerSub {
-        font-size: 12px;
-      }
-  }  
-  
+}  
+ 

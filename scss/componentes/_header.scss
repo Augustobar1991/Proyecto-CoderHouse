@@ -1,13 +1,15 @@
   /* -------inicio header------- */
 header{
   position: fixed;
-  top: 0; 
+  top: 0;
   left: 0;
   right: 0;
   background: rgb(33, 33, 33);
   box-shadow: 0 5px 10px rgba(255, 255, 255, 0.3);
   padding: 0px 2% 0 2%;
-  @include flex(center, space-between,1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   z-index: 100;
 
   .cabeceraIcon{
@@ -18,7 +20,7 @@ header{
   label{
     padding-right: 20px;
     font-size: 20px;
-    color: $color-blanco; 
+    color: $color-blanco;
     cursor: pointer;
     display: none;
   }
@@ -40,7 +42,6 @@ header{
           &:focus-within > ul,
           &:hover > ul{
             display: initial;
-            // text-align: start;
           }
           & a:hover{
             background: $color-rojoText;
@@ -59,9 +60,6 @@ header{
               text-align:  start;
               width: 100%;
               border-bottom: 3px solid rgba(255, 0, 0, 0.6);
-              ul{
-                top: 0;
-              } 
              }
             }
       }
@@ -71,50 +69,77 @@ header{
     }
 }
 
-
-@media(max-width:800px){
-  header{
-    padding: 0px 0.5% 0 0.5%;
-    .cabecera__lista li a{
-      padding: 15px 8px;
-    }
-  }
-
+.cabecera__sublista_sublista {
+  position: absolute;
+  width: 145px;
+  background: rgba(63, 63, 63, 0.7);
+  display: none;
+}
+.cabecera__sublista_sublista li {
+  text-align: start;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid rgba(255, 0, 0, 0.6);
 }
 
-@media(max-width:600px){
-    header{
-      label{
-        display: initial;
-      }
-      .navbar{
-        position: absolute;
-        top: 100%;
-        left: 0%;
-        right: 0%;
-        background: rgb(33, 33, 33);
-        border-top: 1px solid rgba(255, 255, 255, 0.3);
-        display: none;
-      }
-      .cabecera__lista li{
-        width: 100%;
-        border-bottom: 3px solid rgba(255, 0, 0, 0.6);
+@media (max-width: 1040px) {
+  header {
+    padding: 0px 0.5% 0 0.5%;
+  }
+  header .cabecera__lista li a {
+    padding: 5px 8px;
+  }
+}
 
-        .cabecera__sublista{
-          position: relative;
-          text-align:left;
-          width: 100%;
-    
-        li{
-          background: rgb(66, 66, 66);
-          ul{
-            left: 0%;
-            width: 100%;
-          }
-        }
+@media (max-width: 840px) {
+  header {
+    padding: 0px 0.1% 0 0.1%;
+  }
+  header .cabecera__lista li a {
+    padding: 8px 5px;
+  }
+}
 
-        }
-      }
+@media (max-width: 800px) {
+  header label {
+    display: initial;
+  }
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    right: 0%;
+    background: rgb(33, 33, 33);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    display: none;
+  }
+  header .cabecera__lista li {
+    width: 100%;
+    border-bottom: 3px solid rgba(255, 0, 0, 0.6);
+  }
+  header .cabecera__lista li .cabecera__sublista {
+    position: relative;
+    text-align: left;
+    width: 100%;
+  }
+  header .cabecera__lista li .cabecera__sublista li {
+    background: rgb(66, 66, 66);
+  }
+  header .cabecera__lista li .cabecera__sublista li ul {
+    left: 0%;
+    width: 100%;
+  }
+  .cabecera__sublista_sublista {
+    position: relative;
+    text-align: left;
+    width: 100%;
+  }
+  .cabecera__sublista_sublista  li {
+    background: rgb(66, 66, 66);
+  }
+  .cabecera__sublista_sublista  li ul {
+    left: 0%;
+    width: 100%;
   }
   #menu-bar:checked ~ .navbar{
     display: initial;
