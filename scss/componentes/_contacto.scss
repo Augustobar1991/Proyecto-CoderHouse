@@ -1,0 +1,104 @@
+/* -------Contacto------- */
+#contacto{
+    padding: 100px 20px 0 20px;
+  }
+  .contactop{
+    position: relative;
+    top: -3vh;
+    font-size: 30px;
+    color: $color-rojizo;
+    font-weight: 600;
+    font-style: map-get($forma-de-texto , estilo-de-fuente );
+    text-transform: map-get($forma-de-texto , texto-transform );
+  }
+  .lineacontacto{
+    position: relative;
+    top: -3vh;
+    width: 100%;
+    height: 4px;
+    background: $color-rojizo;
+    z-index: 50;
+  }
+  #contacto{
+    color: $color-blanco;
+  }
+  .contact {
+    max-width: 60%;
+    margin: 0px auto;
+  }
+  .suscripcion {
+    max-width: 550px;
+    margin: 0px auto;
+    background-color: #680c0c;
+  }
+  .texto-suscipcion {
+    background-color: #00000063;
+    border-radius: 0.5rem;
+  }
+  .ubi{
+    padding-top: 2rem;
+    padding-bottom: 15px;
+  }
+  .contacto__mapa iframe{
+    width: 90%;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+
+
+
+
+  @media(max-width:800px){
+
+  .contactop{
+    font-size: 3.7vw;
+  }
+  .fab{
+    font-size: 5.5vw;
+  }
+  .flecha1{
+    font-size: 5.5vw; 
+  }
+  .containerSub {
+    font-size: 14px;
+  }
+}
+
+@media(max-width:768px){
+    .espacioubi{
+        padding-top: 3vw;
+    }
+
+}
+
+@media(max-width:600px){
+    .fab{
+        font-size: 7vw;
+      }
+      .bi-arrow-up-circle-fill{
+        font-size: 7vw; 
+      }
+      .h2-responsive{
+        font-size: 4.5vw;
+      }
+      .texto{
+        font-size: 4.5vw;
+      }
+      .ubi{
+        font-size: 20px;
+      }
+      .list-unstyled p{
+        font-size: 14px;
+      }
+      .suscripcion {
+        max-width: 450px;
+        & h3{
+          font-size: 20px;
+        }
+      }
+
+      .containerSub {
+        font-size: 12px;
+      }
+}
